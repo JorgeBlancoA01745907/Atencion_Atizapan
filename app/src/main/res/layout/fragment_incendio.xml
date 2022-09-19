@@ -28,6 +28,7 @@
         android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="224dp"
+        android:background="#00404040"
         android:src="@drawable/incendio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
