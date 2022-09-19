@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacion"
+    app:startDestination="@id/principalFrag">
+
+    <fragment
+        android:id="@+id/principalFrag"
+        android:name="mx.itesm.aa.atencionatizapan.view.PrincipalFrag"
+        android:label="fragment_principal"
+        tools:layout="@layout/fragment_principal" >
+        <action
+            android:id="@+id/action_principalFrag_to_incendioFrag"
+            app:destination="@id/incendioFrag" />
+        <action
+            android:id="@+id/action_principalFrag_to_calleCerradaFrag"
+            app:destination="@id/calleCerradaFrag" />
+        <action
+            android:id="@+id/action_principalFrag_to_lluviaFrag"
+            app:destination="@id/lluviaFrag" />
+        <action
+            android:id="@+id/action_principalFrag_to_inundacionFrag"
+            app:destination="@id/inundacionFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/lluviaFrag"
+        android:name="mx.itesm.aa.atencionatizapan.view.LluviaFrag"
+        android:label="fragment_lluvia"
+        tools:layout="@layout/fragment_lluvia" />
+    <fragment
+        android:id="@+id/calleCerradaFrag"
+        android:name="mx.itesm.aa.atencionatizapan.view.CalleCerradaFrag"
+        android:label="fragment_calle_cerrada"
+        tools:layout="@layout/fragment_calle_cerrada" />
+    <fragment
+        android:id="@+id/inundacionFrag"
+        android:name="mx.itesm.aa.atencionatizapan.view.InundacionFrag"
+        android:label="fragment_inundacion"
+        tools:layout="@layout/fragment_inundacion" />
+    <fragment
+        android:id="@+id/incendioFrag"
+        android:name="mx.itesm.aa.atencionatizapan.view.IncendioFrag"
+        android:label="fragment_incendio"
+        tools:layout="@layout/fragment_incendio" />
+</navigation>
