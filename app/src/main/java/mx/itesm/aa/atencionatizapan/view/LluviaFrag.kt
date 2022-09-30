@@ -14,6 +14,7 @@ import mx.itesm.aa.atencionatizapan.databinding.FragmentLluviaBinding
 import mx.itesm.aa.atencionatizapan.model.LluviaData
 import mx.itesm.aa.atencionatizapan.viewmodel.LluviaViewModel
 
+
 class LluviaFrag : Fragment() {
 
     private lateinit var binding: FragmentLluviaBinding
@@ -28,22 +29,28 @@ class LluviaFrag : Fragment() {
     ): View? {
         //return inflater.inflate(R.layout.fragment_costo, container, false)
         binding = FragmentLluviaBinding.inflate(layoutInflater)
-        configurarObservables()
-        configurarRV()
         return binding.root
     }
 
-    private fun configurarObservables() {
+    //Los componentes graficos YA EXISTEN
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        configurarRV()
+        //configurarObservables()
+    }
+
+    /*private fun configurarObservables() {
         lluviaVM.listaEventos.observe(viewLifecycleOwner){lista ->
             val arrEventos = lista.toTypedArray()
             adaptador.arrEventos = arrEventos //se cambia la fuente de datos
             adaptador.notifyDataSetChanged() // RECARGA todo
         }
-    }
+    }*/
 
     override fun onStart() {
         super.onStart()
-        lluviaVM.descargarDatosEventos()
+        //lluviaVM.descargarDatosEventos()
+        println("PRUEBA DE LLUVIA")
     }
 
     private fun configurarRV() {
