@@ -25,8 +25,8 @@ class AdaptadorLluvia(val context: Context,
 
     // Poblar la vista (renglon) con los datos del indice 'position'
     override fun onBindViewHolder(holder: RenglonEvento, position: Int) {
-        val pais = arrEventos[position]
-        holder.set(pais)
+        val evento = arrEventos[position]
+        holder.set(evento)
     }
 
     // El numero de renglones que tendra el recyclerview
