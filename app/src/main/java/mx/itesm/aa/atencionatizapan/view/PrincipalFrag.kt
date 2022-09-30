@@ -6,7 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.setFragmentResultListener
+import androidx.navigation.fragment.findNavController
 import mx.itesm.aa.atencionatizapan.R
+import mx.itesm.aa.atencionatizapan.databinding.FragmentPrincipalBinding
 import mx.itesm.aa.atencionatizapan.viewmodel.PrincipalViewModel
 
 class PrincipalFrag : Fragment() {
@@ -16,6 +19,8 @@ class PrincipalFrag : Fragment() {
     }
 
     private lateinit var viewModel: PrincipalViewModel
+
+    private lateinit var binding: FragmentPrincipalBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,5 +34,17 @@ class PrincipalFrag : Fragment() {
         viewModel = ViewModelProvider(this).get(PrincipalViewModel::class.java)
         // TODO: Use the ViewModel
     }
+
+    /*private fun registrarEventos() {
+        binding.buttonLluvia.setOnClickListener {
+            val tipo = binding.spServicios.selectedItem.toString()
+            val accion = PrincipalFragDirections.actionPrincipalFragToCostoFrag(tipo) //flecha de transicion
+            findNavController().navigate(accion)
+        }
+        setFragmentResultListener("descargarCosto"){requestKey, bundle ->
+            val costo = bundle.getDouble("costo")
+            binding.tvCosto.setText("Precio a pagar $$costo")
+        }
+    }*/
 
 }
