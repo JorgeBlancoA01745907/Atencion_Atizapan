@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import mx.itesm.aa.atencionatizapan.R
-import mx.itesm.aa.atencionatizapan.model.EventoData
 import mx.itesm.aa.atencionatizapan.model.LluviaData
 
 class AdaptadorLluvia(val context: Context,

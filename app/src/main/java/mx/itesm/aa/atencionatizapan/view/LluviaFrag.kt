@@ -10,11 +10,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import mx.itesm.aa.atencionatizapan.R
 import mx.itesm.aa.atencionatizapan.databinding.FragmentLluviaBinding
 import mx.itesm.aa.atencionatizapan.model.LluviaData
 import mx.itesm.aa.atencionatizapan.viewmodel.LluviaViewModel
-import mx.itesm.aa.atencionatizapan.view.AdaptadorLluvia
 
 
 class LluviaFrag : Fragment() {

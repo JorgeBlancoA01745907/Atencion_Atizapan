@@ -7,6 +7,7 @@ import mx.itesm.aa.atencionatizapan.R
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_lluvia)
+        //setContentView(R.layout.fragment_lluvia)
+        setContentView(R.layout.activity_main)
     }
 }
