@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import mx.itesm.aa.atencionatizapan.R
-import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.IncendioData
+import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.CalleCerradaData
 
-class AdaptadorIncendio (val context: Context,
-                         var arrEventos: Array<IncendioData>):
-    RecyclerView.Adapter<AdaptadorIncendio.RenglonEvento>() {
+
+class AdaptadorCalleCerrada (val context: Context,
+                             var arrEventos: Array<CalleCerradaData>):
+    RecyclerView.Adapter<AdaptadorCalleCerrada.RenglonEvento>() {
 
 
     // Una vista para un renglon
@@ -35,7 +36,7 @@ class AdaptadorIncendio (val context: Context,
 
     class RenglonEvento(var renglonEvento: View) : RecyclerView.ViewHolder(renglonEvento)
     {
-        fun set(evento: IncendioData) {
+        fun set(evento: CalleCerradaData) {
             val tituloEvento = renglonEvento.findViewById<TextView>(R.id.tituloEvento)
             val fechaEvento = renglonEvento.findViewById<TextView>(R.id.fechaEvento)
             val horaEvento = renglonEvento.findViewById<TextView>(R.id.horaEvento)
