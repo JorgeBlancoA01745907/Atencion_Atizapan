@@ -1,4 +1,4 @@
-package mx.itesm.aa.atencionatizapan.view
+package mx.itesm.aa.atencionatizapan.view.fragmentos
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -7,26 +7,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import mx.itesm.aa.atencionatizapan.R
-import mx.itesm.aa.atencionatizapan.viewmodel.InundacionViewModel
+import mx.itesm.aa.atencionatizapan.viewmodel.CalleCerradaViewModel
 
-class InundacionFrag : Fragment() {
+class CalleCerradaFrag : Fragment() {
 
     companion object {
-        fun newInstance() = InundacionFrag()
+        fun newInstance() = CalleCerradaFrag()
     }
 
-    private lateinit var viewModel: InundacionViewModel
+    private lateinit var viewModel: CalleCerradaViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_inundacion, container, false)
+        return inflater.inflate(R.layout.fragment_calle_cerrada, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(InundacionViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(CalleCerradaViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

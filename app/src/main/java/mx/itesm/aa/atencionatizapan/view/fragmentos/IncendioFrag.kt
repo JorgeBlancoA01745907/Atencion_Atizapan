@@ -1,6 +1,5 @@
-package mx.itesm.aa.atencionatizapan.view
+package mx.itesm.aa.atencionatizapan.view.fragmentos
 
-import android.content.Context
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,25 +9,30 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import mx.itesm.aa.atencionatizapan.R
+import mx.itesm.aa.atencionatizapan.databinding.FragmentIncendioBinding
 import mx.itesm.aa.atencionatizapan.databinding.FragmentLluviaBinding
-import mx.itesm.aa.atencionatizapan.model.LluviaData
+import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.IncendioData
+import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.LluviaData
+import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorIncendio
+import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorLluvia
+import mx.itesm.aa.atencionatizapan.viewmodel.IncendioViewModel
 import mx.itesm.aa.atencionatizapan.viewmodel.LluviaViewModel
 
+class IncendioFrag : Fragment() {
 
-class LluviaFrag : Fragment() {
+    private lateinit var binding: FragmentIncendioBinding
 
-    private lateinit var binding: FragmentLluviaBinding
+    private val incendioVM: IncendioViewModel by viewModels()
 
-    private val lluviaVM: LluviaViewModel by viewModels()
-
-    private lateinit var adaptador: AdaptadorLluvia
+    private lateinit var adaptador: AdaptadorIncendio
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         //return inflater.inflate(R.layout.fragment_costo, container, false)
-        binding = FragmentLluviaBinding.inflate(layoutInflater)
+        binding = FragmentIncendioBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -43,7 +47,6 @@ class LluviaFrag : Fragment() {
         super.onStart()
         //lluviaVM.descargarDatosEventos()
         //configurarObservables()
-        println("PRUEBA DE LLUVIA")
     }
 
     /*private fun configurarObservables() {
@@ -55,10 +58,10 @@ class LluviaFrag : Fragment() {
     }*/
 
     private fun configurarRV() {
-        val arrEventos = arrayOf(LluviaData(1, 3.11, 4.1, 2.1, 2.1, "17/02/2022", "02:32:02"))
+        val arrEventos = arrayOf(IncendioData(2, "Monte", "250315", "Pastores", "04/06/2022", "12:08:27"))
         val layout = LinearLayoutManager(requireContext())
         //ya no se declara adaptador porque ya es una variable de instancia
-        adaptador = AdaptadorLluvia(requireContext(), arrEventos)
+        adaptador = AdaptadorIncendio(requireContext(), arrEventos)
         binding.rvEventos.adapter = adaptador
         binding.rvEventos.layoutManager = layout
         // Separador (linea con orientacion de rv)

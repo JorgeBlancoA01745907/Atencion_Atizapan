@@ -1,4 +1,4 @@
-package mx.itesm.aa.atencionatizapan.model
+package mx.itesm.aa.atencionatizapan.model.clasesDataEventos
 
 data class LluviaData(
     val idLluvia: Int,

@@ -1,4 +1,4 @@
-package mx.itesm.aa.atencionatizapan.view
+package mx.itesm.aa.atencionatizapan.view.adaptadores
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import mx.itesm.aa.atencionatizapan.R
-import mx.itesm.aa.atencionatizapan.model.LluviaData
+import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.IncendioData
 
-class AdaptadorLluvia(val context: Context,
-                      var arrEventos: Array<LluviaData>):
-    RecyclerView.Adapter<AdaptadorLluvia.RenglonEvento>() {
+class AdaptadorIncendio (val context: Context,
+                         var arrEventos: Array<IncendioData>):
+    RecyclerView.Adapter<AdaptadorIncendio.RenglonEvento>() {
 
 
     // Una vista para un renglon
@@ -35,13 +35,13 @@ class AdaptadorLluvia(val context: Context,
 
     class RenglonEvento(var renglonEvento: View) : RecyclerView.ViewHolder(renglonEvento)
     {
-        fun set(evento: LluviaData) {
+        fun set(evento: IncendioData) {
             val tipoEvento = renglonEvento.findViewById<TextView>(R.id.tituloEvento)
             val fechaEvento = renglonEvento.findViewById<TextView>(R.id.fechaEvento)
             val horaEvento = renglonEvento.findViewById<TextView>(R.id.horaEvento)
-            tipoEvento.text = "Humedad: " + evento.volumen.toString()
-            fechaEvento.text = evento.fecha
-            horaEvento.text = evento.hora
+            tipoEvento.text = "Calle: " + evento.calle
+            fechaEvento.text = "Fecha: " + evento.fecha
+            horaEvento.text = "Hora: " + evento.hora
 
         }
 

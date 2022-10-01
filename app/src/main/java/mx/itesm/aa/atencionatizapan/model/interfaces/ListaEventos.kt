@@ -1,5 +1,6 @@
-package mx.itesm.aa.atencionatizapan.model
+package mx.itesm.aa.atencionatizapan.model.interfaces
 
+import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.EventoData
 import retrofit2.Call
 import retrofit2.http.GET
 
