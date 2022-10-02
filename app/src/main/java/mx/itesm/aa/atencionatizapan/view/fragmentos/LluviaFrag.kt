@@ -13,8 +13,6 @@ import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.LluviaData
 import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorLluvia
 import mx.itesm.aa.atencionatizapan.viewmodel.ListaLluviaVM
 
-import mx.itesm.aa.atencionatizapan.model.interfaces.ServicioEventosAPI
-
 
 class LluviaFrag : Fragment() {
 
@@ -42,7 +40,7 @@ class LluviaFrag : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        lluviaVM.descargarDatosEventos()
+        lluviaVM.descargarDatosLluvia()
         configurarObservables()
     }
 

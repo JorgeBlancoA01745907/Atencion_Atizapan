@@ -11,13 +11,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import mx.itesm.aa.atencionatizapan.databinding.FragmentIncendioBinding
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.IncendioData
 import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorIncendio
-import mx.itesm.aa.atencionatizapan.viewmodel.IncendioViewModel
+import mx.itesm.aa.atencionatizapan.viewmodel.ListaIncendioVM
 
 class IncendioFrag : Fragment() {
 
     private lateinit var binding: FragmentIncendioBinding
 
-    private val incendioVM: IncendioViewModel by viewModels()
+    private val incendioVM: ListaIncendioVM by viewModels()
 
     private lateinit var adaptador: AdaptadorIncendio
 
@@ -39,17 +39,17 @@ class IncendioFrag : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        //lluviaVM.descargarDatosEventos()
-        //configurarObservables()
+        incendioVM.descargarDatosIncendio()
+        configurarObservables()
     }
 
-    /*private fun configurarObservables() {
-        lluviaVM.listaEventos.observe(viewLifecycleOwner){lista ->
+    private fun configurarObservables() {
+        incendioVM.listaIncendio.observe(viewLifecycleOwner){lista ->
             val arrEventos = lista.toTypedArray()
             adaptador.arrEventos = arrEventos //se cambia la fuente de datos
             adaptador.notifyDataSetChanged() // RECARGA todo
         }
-    }*/
+    }
 
     private fun configurarRV() {
         val arrEventos = arrayOf(IncendioData(2, "Monte", "250315", "Pastores", "04/06/2022", "12:08:27"))

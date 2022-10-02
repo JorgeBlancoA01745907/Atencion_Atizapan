@@ -1,6 +1,5 @@
 package mx.itesm.aa.atencionatizapan.view.fragmentos
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,20 +8,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import mx.itesm.aa.atencionatizapan.R
 import mx.itesm.aa.atencionatizapan.databinding.FragmentInundacionBinding
-import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.CalleCerradaData
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.InundacionData
-import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorCalleCerrada
 import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorInundacion
-import mx.itesm.aa.atencionatizapan.viewmodel.CalleCerradaViewModel
-import mx.itesm.aa.atencionatizapan.viewmodel.InundacionViewModel
+import mx.itesm.aa.atencionatizapan.viewmodel.ListaInundacionVM
 
 class InundacionFrag : Fragment() {
 
     private lateinit var binding: FragmentInundacionBinding
 
-    private val inundacionVM: InundacionViewModel by viewModels()
+    private val inundacionVM: ListaInundacionVM by viewModels()
 
     private lateinit var adaptador: AdaptadorInundacion
 
@@ -44,17 +39,17 @@ class InundacionFrag : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        //lluviaVM.descargarDatosEventos()
-        //configurarObservables()
+        inundacionVM.descargarDatosInundacion()
+        configurarObservables()
     }
 
-    /*private fun configurarObservables() {
-        lluviaVM.listaEventos.observe(viewLifecycleOwner){lista ->
+    private fun configurarObservables() {
+        inundacionVM.listaInundacion.observe(viewLifecycleOwner){lista ->
             val arrEventos = lista.toTypedArray()
             adaptador.arrEventos = arrEventos //se cambia la fuente de datos
             adaptador.notifyDataSetChanged() // RECARGA todo
         }
-    }*/
+    }
 
     private fun configurarRV() {
         val arrEventos = arrayOf(InundacionData(8, "Alborada", "153678", "Esmeralda", "15/08/2022", "14:25:06"))
