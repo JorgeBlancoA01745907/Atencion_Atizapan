@@ -1,6 +1,5 @@
 package mx.itesm.aa.atencionatizapan.view.fragmentos
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,15 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import mx.itesm.aa.atencionatizapan.R
 import mx.itesm.aa.atencionatizapan.databinding.FragmentIncendioBinding
-import mx.itesm.aa.atencionatizapan.databinding.FragmentLluviaBinding
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.IncendioData
-import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.LluviaData
 import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorIncendio
-import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorLluvia
 import mx.itesm.aa.atencionatizapan.viewmodel.IncendioViewModel
-import mx.itesm.aa.atencionatizapan.viewmodel.LluviaViewModel
 
 class IncendioFrag : Fragment() {
 

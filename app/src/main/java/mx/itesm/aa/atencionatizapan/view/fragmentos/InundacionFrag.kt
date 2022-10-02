@@ -10,7 +10,6 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import mx.itesm.aa.atencionatizapan.R
-import mx.itesm.aa.atencionatizapan.databinding.FragmentCalleCerradaBinding
 import mx.itesm.aa.atencionatizapan.databinding.FragmentInundacionBinding
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.CalleCerradaData
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.InundacionData

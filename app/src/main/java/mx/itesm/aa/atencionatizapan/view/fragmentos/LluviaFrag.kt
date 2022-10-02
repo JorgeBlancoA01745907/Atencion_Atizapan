@@ -11,14 +11,16 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import mx.itesm.aa.atencionatizapan.databinding.FragmentLluviaBinding
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.LluviaData
 import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorLluvia
-import mx.itesm.aa.atencionatizapan.viewmodel.LluviaViewModel
+import mx.itesm.aa.atencionatizapan.viewmodel.ListaLluviaVM
+
+import mx.itesm.aa.atencionatizapan.model.interfaces.ServicioEventosAPI
 
 
 class LluviaFrag : Fragment() {
 
     private lateinit var binding: FragmentLluviaBinding
 
-    private val lluviaVM: LluviaViewModel by viewModels()
+    private val lluviaVM: ListaLluviaVM by viewModels()
 
     private lateinit var adaptador: AdaptadorLluvia
 
@@ -40,17 +42,17 @@ class LluviaFrag : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        //lluviaVM.descargarDatosEventos()
-        //configurarObservables()
+        lluviaVM.descargarDatosEventos()
+        configurarObservables()
     }
 
-    /*private fun configurarObservables() {
-        lluviaVM.listaEventos.observe(viewLifecycleOwner){lista ->
+    private fun configurarObservables() {
+        lluviaVM.listaLluvia.observe(viewLifecycleOwner){lista ->
             val arrEventos = lista.toTypedArray()
             adaptador.arrEventos = arrEventos //se cambia la fuente de datos
             adaptador.notifyDataSetChanged() // RECARGA todo
         }
-    }*/
+    }
 
     private fun configurarRV() {
         val arrEventos = arrayOf(LluviaData(1, 3.11, 4.1, 2.1, 2.1, "17/02/2022", "02:32:02"))
