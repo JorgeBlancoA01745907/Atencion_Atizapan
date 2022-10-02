@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navegacion"
-    app:startDestination="@id/lluviaFrag">
+    app:startDestination="@id/principalFrag">
 
     <fragment
         android:id="@+id/principalFrag"
@@ -13,6 +13,15 @@
         <action
             android:id="@+id/action_principalFrag_to_lluviaFrag"
             app:destination="@id/lluviaFrag" />
+        <action
+            android:id="@+id/action_principalFrag_to_inundacionFrag"
+            app:destination="@id/inundacionFrag" />
+        <action
+            android:id="@+id/action_principalFrag_to_calleCerradaFrag"
+            app:destination="@id/calleCerradaFrag" />
+        <action
+            android:id="@+id/action_principalFrag_to_incendioFrag"
+            app:destination="@id/incendioFrag" />
     </fragment>
     <fragment
         android:id="@+id/lluviaFrag"

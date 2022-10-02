@@ -14,9 +14,9 @@ import mx.itesm.aa.atencionatizapan.viewmodel.PrincipalViewModel
 
 class PrincipalFrag : Fragment() {
 
-    companion object {
+    /* companion object {
         fun newInstance() = PrincipalFrag()
-    }
+    } */
 
     private lateinit var viewModel: PrincipalViewModel
 
@@ -26,25 +26,33 @@ class PrincipalFrag : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_principal, container, false)
+        //return inflater.inflate(R.layout.fragment_costo, container, false)
+        binding = FragmentPrincipalBinding.inflate(layoutInflater)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(PrincipalViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        registrarEventos()
     }
 
-    /*private fun registrarEventos() {
-        binding.buttonLluvia.setOnClickListener {
-            val tipo = binding.spServicios.selectedItem.toString()
-            val accion = PrincipalFragDirections.actionPrincipalFragToCostoFrag(tipo) //flecha de transicion
+    private fun registrarEventos() {
+        binding.ibLluvia.setOnClickListener {
+            val accion = R.id.action_principalFrag_to_lluviaFrag
             findNavController().navigate(accion)
         }
-        setFragmentResultListener("descargarCosto"){requestKey, bundle ->
-            val costo = bundle.getDouble("costo")
-            binding.tvCosto.setText("Precio a pagar $$costo")
+        binding.ibCalle.setOnClickListener {
+            val accion = R.id.action_principalFrag_to_calleCerradaFrag
+            findNavController().navigate(accion)
         }
-    }*/
+        binding.ibInundacion.setOnClickListener {
+            val accion = R.id.action_principalFrag_to_inundacionFrag
+            findNavController().navigate(accion)
+        }
+        binding.ibIncendio.setOnClickListener {
+            val accion = R.id.action_principalFrag_to_incendioFrag
+            findNavController().navigate(accion)
+        }
+    }
 
 }

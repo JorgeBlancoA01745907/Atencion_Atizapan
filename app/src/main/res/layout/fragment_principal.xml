@@ -16,53 +16,103 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="136dp"
         android:layout_height="105dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="624dp"
         android:src="@drawable/logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="248dp"
-        android:layout_height="266dp"
+        android:layout_width="118dp"
+        android:layout_height="118dp"
         android:src="@drawable/todo_bien"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.385" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/text_calle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="monospace"
-        android:text="Todo esta bien"
+        android:text="¡Buenas Tardes!"
         android:textAlignment="center"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.564"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:layout_constraintVertical_bias="0.244" />
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
-    <Button
-        android:id="@+id/buttonLluvia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="579dp" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/imgLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_calle">
+
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/ibLluvia"
+                android:layout_width="match_parent"
+                android:layout_height="253dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/lluvia" />
+
+            <ImageButton
+                android:id="@+id/ibIncendio"
+                android:layout_width="match_parent"
+                android:layout_height="254dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/incendio" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/ibCalle"
+                android:layout_width="match_parent"
+                android:layout_height="252dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/calle_cerrada" />
+
+            <ImageButton
+                android:id="@+id/ibInundacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/inundacion" />
+        </LinearLayout>
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
