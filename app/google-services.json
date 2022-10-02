@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "707745831588",
+    "project_id": "notifremota-97a60",
+    "storage_bucket": "notifremota-97a60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707745831588:android:cca5357454a19f358de431",
+        "android_client_info": {
+          "package_name": "mx.itesm.aa.atencionatizapan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707745831588-16npc2s5s5ql5soi6h81aoo732gau432.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxI6pguSCAMiTDCuJh1WPTlpYnvihwFg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "707745831588-16npc2s5s5ql5soi6h81aoo732gau432.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707745831588:android:36008e4592470dbe8de431",
+        "android_client_info": {
+          "package_name": "mx.itesm.ejcv.notifremota"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707745831588-16npc2s5s5ql5soi6h81aoo732gau432.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxI6pguSCAMiTDCuJh1WPTlpYnvihwFg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "707745831588-16npc2s5s5ql5soi6h81aoo732gau432.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
