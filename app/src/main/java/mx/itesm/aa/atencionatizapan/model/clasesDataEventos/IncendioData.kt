@@ -2,6 +2,9 @@ package mx.itesm.aa.atencionatizapan.model.clasesDataEventos
 
 import com.google.gson.annotations.SerializedName
 
+/** @author:
+ * Data class que establece los datos de la clase Incendio
+ */
 data class IncendioData(
     @SerializedName("ID_incendio")
     val idIncendio: Int,

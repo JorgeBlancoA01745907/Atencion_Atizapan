@@ -11,17 +11,21 @@ import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import mx.itesm.aa.atencionatizapan.R
-
+/** @author:
+ *  Vista del fragmento de servicio de mensajes
+ */
 class ServicioMensajesAA : FirebaseMessagingService()
 {
     private val channelName = "alertasServer"
     private val channelId = "mx.itesm.aa.atencionatizapan.view"
 
+    // Al recibir nuevo token
     override fun onNewToken(token: String) {
         println("Nuevo Token: $token")
         // enviarTokenAPI(token) token -> BD
     }
 
+    // Al recibir un mensaje
     override fun onMessageReceived(message: RemoteMessage) {
         println("Llega una NOTIFICACIÓN remota")
 
@@ -30,6 +34,7 @@ class ServicioMensajesAA : FirebaseMessagingService()
         }
     }
 
+    // Funcion que genera una notificación
     private fun generarNotificacion(message: RemoteMessage) {
         // Abre la app
         val intent = Intent(this, MainActivity::class.java) // Abre la actividad que tiene el fragment

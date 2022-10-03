@@ -12,6 +12,10 @@ import mx.itesm.aa.atencionatizapan.R
 import mx.itesm.aa.atencionatizapan.databinding.FragmentPrincipalBinding
 import mx.itesm.aa.atencionatizapan.viewmodel.PrincipalViewModel
 
+/** @author:
+ *  Vista del fragmento Principal
+ */
+
 class PrincipalFrag : Fragment() {
 
     /* companion object {

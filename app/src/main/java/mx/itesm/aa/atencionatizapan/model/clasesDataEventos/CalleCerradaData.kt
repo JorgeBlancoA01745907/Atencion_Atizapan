@@ -2,6 +2,9 @@ package mx.itesm.aa.atencionatizapan.model.clasesDataEventos
 
 import com.google.gson.annotations.SerializedName
 
+/** @author:
+ * Data class que establece los datos de la clase Calle Cerrada
+ */
 data class CalleCerradaData(
     @SerializedName("ID_calleC")
     val idCalleCerrada: Int,

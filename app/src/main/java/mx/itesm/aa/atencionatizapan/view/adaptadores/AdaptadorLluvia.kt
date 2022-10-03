@@ -8,7 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import mx.itesm.aa.atencionatizapan.R
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.LluviaData
-
+/** @author:
+ *  Vista del adaptador de lluvia
+ */
 class AdaptadorLluvia(val context: Context,
                       var arrEventos: Array<LluviaData>):
     RecyclerView.Adapter<AdaptadorLluvia.RenglonEvento>() {
@@ -33,6 +35,7 @@ class AdaptadorLluvia(val context: Context,
         return arrEventos.size
     }
 
+    // Establece los datos a mostrar en su respectivo texto
     class RenglonEvento(var renglonEvento: View) : RecyclerView.ViewHolder(renglonEvento)
     {
         fun set(evento: LluviaData) {

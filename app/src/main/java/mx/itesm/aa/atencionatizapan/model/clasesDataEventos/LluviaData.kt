@@ -2,6 +2,10 @@ package mx.itesm.aa.atencionatizapan.model.clasesDataEventos
 
 import com.google.gson.annotations.SerializedName
 
+/** @author:
+ * Data class que establece los datos de la clase lluvia
+ */
+
 data class LluviaData(
     @SerializedName("ID_lluvia")
     val idLluvia: Int,

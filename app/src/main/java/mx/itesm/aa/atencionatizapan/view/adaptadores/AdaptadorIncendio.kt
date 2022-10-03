@@ -9,6 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import mx.itesm.aa.atencionatizapan.R
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.IncendioData
 
+/** @author:
+ *  Vista del adaptador de Incendio
+ */
+
 class AdaptadorIncendio (val context: Context,
                          var arrEventos: Array<IncendioData>):
     RecyclerView.Adapter<AdaptadorIncendio.RenglonEvento>() {
@@ -33,6 +37,7 @@ class AdaptadorIncendio (val context: Context,
         return arrEventos.size
     }
 
+    // Establece los datos a mostrar en su respectivo texto
     class RenglonEvento(var renglonEvento: View) : RecyclerView.ViewHolder(renglonEvento)
     {
         fun set(evento: IncendioData) {
