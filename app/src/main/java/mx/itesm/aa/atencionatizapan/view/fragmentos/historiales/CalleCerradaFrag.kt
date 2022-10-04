@@ -1,4 +1,4 @@
-package mx.itesm.aa.atencionatizapan.view.fragmentos
+package mx.itesm.aa.atencionatizapan.view.fragmentos.historiales
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,26 +8,25 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import mx.itesm.aa.atencionatizapan.databinding.FragmentLluviaBinding
-import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.LluviaData
-import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorLluvia
-import mx.itesm.aa.atencionatizapan.viewmodel.ListaLluviaVM
+import mx.itesm.aa.atencionatizapan.databinding.FragmentCalleCerradaBinding
+import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.CalleCerradaData
+import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorCalleCerrada
+import mx.itesm.aa.atencionatizapan.viewmodel.descargarHistoriales.ListaCalleCerradaVM
 
+class CalleCerradaFrag : Fragment() {
 
-class LluviaFrag : Fragment() {
+    private lateinit var binding: FragmentCalleCerradaBinding
 
-    private lateinit var binding: FragmentLluviaBinding
+    private val calleCerradaVM: ListaCalleCerradaVM by viewModels()
 
-    private val lluviaVM: ListaLluviaVM by viewModels()
-
-    private lateinit var adaptador: AdaptadorLluvia
+    private lateinit var adaptador: AdaptadorCalleCerrada
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         //return inflater.inflate(R.layout.fragment_costo, container, false)
-        binding = FragmentLluviaBinding.inflate(layoutInflater)
+        binding = FragmentCalleCerradaBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -40,12 +39,12 @@ class LluviaFrag : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        lluviaVM.descargarDatosLluvia()
+        calleCerradaVM.descargarDatosCalleCerrada()
         configurarObservables()
     }
 
     private fun configurarObservables() {
-        lluviaVM.listaLluvia.observe(viewLifecycleOwner){lista ->
+        calleCerradaVM.listaCalleC.observe(viewLifecycleOwner){lista ->
             val arrEventos = lista.toTypedArray()
             adaptador.arrEventos = arrEventos //se cambia la fuente de datos
             adaptador.notifyDataSetChanged() // RECARGA todo
@@ -53,10 +52,10 @@ class LluviaFrag : Fragment() {
     }
 
     private fun configurarRV() {
-        val arrEventos = arrayOf(LluviaData(1, 3.11, 4.1, 2.1, 2.1, "17/02/2022", "02:32:02"))
+        val arrEventos = arrayOf(CalleCerradaData(5, "Prado", "152674", "Echegaray", 1.5, "15/03/2022", "15:02:25"))
         val layout = LinearLayoutManager(requireContext())
         //ya no se declara adaptador porque ya es una variable de instancia
-        adaptador = AdaptadorLluvia(requireContext(), arrEventos)
+        adaptador = AdaptadorCalleCerrada(requireContext(), arrEventos)
         binding.rvEventos.adapter = adaptador
         binding.rvEventos.layoutManager = layout
         // Separador (linea con orientacion de rv)

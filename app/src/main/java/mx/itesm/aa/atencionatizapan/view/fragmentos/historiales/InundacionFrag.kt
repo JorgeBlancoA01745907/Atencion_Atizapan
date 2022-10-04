@@ -1,4 +1,4 @@
-package mx.itesm.aa.atencionatizapan.view.fragmentos
+package mx.itesm.aa.atencionatizapan.view.fragmentos.historiales
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import mx.itesm.aa.atencionatizapan.databinding.FragmentInundacionBinding
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.InundacionData
 import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorInundacion
-import mx.itesm.aa.atencionatizapan.viewmodel.ListaInundacionVM
+import mx.itesm.aa.atencionatizapan.viewmodel.descargarHistoriales.ListaInundacionVM
 
 class InundacionFrag : Fragment() {
 

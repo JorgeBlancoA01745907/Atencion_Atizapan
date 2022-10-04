@@ -1,4 +1,4 @@
-package mx.itesm.aa.atencionatizapan.view.fragmentos
+package mx.itesm.aa.atencionatizapan.view.fragmentos.historiales
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import mx.itesm.aa.atencionatizapan.databinding.FragmentIncendioBinding
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.IncendioData
 import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorIncendio
-import mx.itesm.aa.atencionatizapan.viewmodel.ListaIncendioVM
+import mx.itesm.aa.atencionatizapan.viewmodel.descargarHistoriales.ListaIncendioVM
 
 class IncendioFrag : Fragment() {
 
