@@ -83,14 +83,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="253dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/botonLluvia" />
+                android:src="@drawable/boton_lluvia" />
 
             <ImageButton
                 android:id="@+id/ibIncendio"
                 android:layout_width="match_parent"
                 android:layout_height="254dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/botonIncendio" />
+                android:src="@drawable/boton_incendio" />
         </LinearLayout>
 
         <LinearLayout
@@ -103,14 +103,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="252dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/botonCalle" />
+                android:src="@drawable/boton_calle" />
 
             <ImageButton
                 android:id="@+id/ibInundacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="centerInside"
-                android:src="@drawable/botonInundación" />
+                android:src="@drawable/boton_inundacion" />
         </LinearLayout>
     </LinearLayout>
 
