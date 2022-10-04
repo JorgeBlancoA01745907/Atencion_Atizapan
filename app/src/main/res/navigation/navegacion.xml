@@ -48,4 +48,19 @@
         android:name="mx.itesm.aa.atencionatizapan.view.fragmentos.info.InfoLluviaFragment"
         android:label="fragment_info_lluvia"
         tools:layout="@layout/fragment_info_lluvia" />
+    <fragment
+        android:id="@+id/infoIncendioFragment"
+        android:name="mx.itesm.aa.atencionatizapan.view.fragmentos.info.InfoIncendioFragment"
+        android:label="fragment_info_incendio"
+        tools:layout="@layout/fragment_info_incendio" />
+    <fragment
+        android:id="@+id/infoInundacionFragment"
+        android:name="mx.itesm.aa.atencionatizapan.view.fragmentos.info.InfoInundacionFragment"
+        android:label="fragment_info_inundacion"
+        tools:layout="@layout/fragment_info_inundacion" />
+    <fragment
+        android:id="@+id/infoCalleFragment"
+        android:name="mx.itesm.aa.atencionatizapan.view.fragmentos.info.InfoCalleFragment"
+        android:label="fragment_info_calle"
+        tools:layout="@layout/fragment_info_calle" />
 </navigation>

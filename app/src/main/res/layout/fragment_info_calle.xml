@@ -2,10 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
+    android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragmentos.info.InfoLluviaFragment">
+    tools:context=".view.fragmentos.info.InfoCalleFragment">
 
     <ImageView
         android:id="@+id/imgLogo2"
@@ -37,16 +37,6 @@
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/iconoLluvia"
-        android:layout_width="205dp"
-        android:layout_height="195dp"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/lluvia"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
@@ -57,7 +47,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconoLluvia">
+        app:layout_constraintTop_toBottomOf="@+id/iconoCalle">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -68,7 +58,7 @@
                 android:id="@+id/infoCalle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Humedad"
+                android:text="Calle"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
@@ -76,7 +66,7 @@
                 android:id="@+id/infoCP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Volumen"
+                android:text="CP"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
@@ -84,15 +74,15 @@
                 android:id="@+id/infoColonia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Viento"
+                android:text="Colonia"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
             <TextView
-                android:id="@+id/infoTemperatura"
+                android:id="@+id/infoTiempo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Temperatura"
+                android:text="Tiempo"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
@@ -113,5 +103,17 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
         </LinearLayout>
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iconoCalle"
+        android:layout_width="241dp"
+        android:layout_height="183dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/calle_cerrada"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
