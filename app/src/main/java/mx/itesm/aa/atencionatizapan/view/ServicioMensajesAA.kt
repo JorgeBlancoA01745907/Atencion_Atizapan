@@ -11,8 +11,6 @@ import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import mx.itesm.aa.atencionatizapan.R
-import mx.itesm.aa.atencionatizapan.view.fragmentos.historiales.CalleCerradaFrag
-
 /** @author:
  *  Vista del fragmento de servicio de mensajes
  */
@@ -39,7 +37,7 @@ class ServicioMensajesAA : FirebaseMessagingService()
     // Funcion que genera una notificación
     private fun generarNotificacion(message: RemoteMessage) {
         // Abre la app
-        val intent = Intent(this, PrincipalFrag::class.java) // Abre la actividad que tiene el fragment
+        val intent = Intent(this, MainActivity::class.java) // Abre la actividad que tiene el fragment
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) // Borrar el historial. No meter a la pila. Cuando le de back, regresa
         // al sistema operativo
 

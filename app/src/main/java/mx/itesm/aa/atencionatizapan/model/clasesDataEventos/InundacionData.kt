@@ -1,9 +1,8 @@
 package mx.itesm.aa.atencionatizapan.model.clasesDataEventos
 
 import com.google.gson.annotations.SerializedName
-import java.io.Serializable
 
-/** @author: Jose Luis Madrigal
+/** @author:
  * Data class que establece los datos de la clase Inundación
  */
 data class InundacionData(
@@ -19,4 +18,4 @@ data class InundacionData(
     val fecha: String,
     @SerializedName("HORA")
     val hora: String
-) : Serializable
+)

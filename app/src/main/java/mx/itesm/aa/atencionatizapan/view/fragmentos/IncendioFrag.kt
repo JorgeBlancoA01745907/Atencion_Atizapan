@@ -1,4 +1,4 @@
-package mx.itesm.aa.atencionatizapan.view.fragmentos.historiales
+package mx.itesm.aa.atencionatizapan.view.fragmentos
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,32 +6,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import mx.itesm.aa.atencionatizapan.databinding.FragmentInundacionBinding
-import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.InundacionData
-import mx.itesm.aa.atencionatizapan.model.interfaces.ListenerRecycler
-import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorInundacion
-import mx.itesm.aa.atencionatizapan.viewmodel.descargarHistoriales.ListaInundacionVM
-/** @author: Eduardo Joel Cortez Valente
- * Fragmento que representa la pantalla con el historial de inundación
- */
+import mx.itesm.aa.atencionatizapan.databinding.FragmentIncendioBinding
+import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.IncendioData
+import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorIncendio
+import mx.itesm.aa.atencionatizapan.viewmodel.ListaIncendioVM
 
-class InundacionFrag : Fragment(), ListenerRecycler {
+class IncendioFrag : Fragment() {
 
-    private lateinit var binding: FragmentInundacionBinding
+    private lateinit var binding: FragmentIncendioBinding
 
-    private val inundacionVM: ListaInundacionVM by viewModels()
+    private val incendioVM: ListaIncendioVM by viewModels()
 
-    private lateinit var adaptador: AdaptadorInundacion
+    private lateinit var adaptador: AdaptadorIncendio
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         //return inflater.inflate(R.layout.fragment_costo, container, false)
-        binding = FragmentInundacionBinding.inflate(layoutInflater)
+        binding = FragmentIncendioBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -44,12 +39,12 @@ class InundacionFrag : Fragment(), ListenerRecycler {
 
     override fun onStart() {
         super.onStart()
-        inundacionVM.descargarDatosInundacion()
+        incendioVM.descargarDatosIncendio()
         configurarObservables()
     }
 
     private fun configurarObservables() {
-        inundacionVM.listaInundacion.observe(viewLifecycleOwner){lista ->
+        incendioVM.listaIncendio.observe(viewLifecycleOwner){lista ->
             val arrEventos = lista.toTypedArray()
             adaptador.arrEventos = arrEventos //se cambia la fuente de datos
             adaptador.notifyDataSetChanged() // RECARGA todo
@@ -57,11 +52,10 @@ class InundacionFrag : Fragment(), ListenerRecycler {
     }
 
     private fun configurarRV() {
-        val arrEventos = arrayOf(InundacionData(8, "Alborada", "153678", "Esmeralda", "15/08/2022", "14:25:06"))
+        val arrEventos = arrayOf(IncendioData(2, "Monte", "250315", "Pastores", "04/06/2022", "12:08:27"))
         val layout = LinearLayoutManager(requireContext())
         //ya no se declara adaptador porque ya es una variable de instancia
-        adaptador = AdaptadorInundacion(requireContext(), arrEventos)
-        adaptador?.listener = this
+        adaptador = AdaptadorIncendio(requireContext(), arrEventos)
         binding.rvEventos.adapter = adaptador
         binding.rvEventos.layoutManager = layout
         // Separador (linea con orientacion de rv)
@@ -69,9 +63,4 @@ class InundacionFrag : Fragment(), ListenerRecycler {
         binding.rvEventos.addItemDecoration(separador)
     }
 
-    override fun itemClicked(position: Int) {
-        val inundacion = adaptador.arrEventos[position]
-        val accion = InundacionFragDirections.actionInundacionFragToInfoInundacionFragment(inundacion)
-        findNavController().navigate(accion)
-    }
 }
