@@ -8,11 +8,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import mx.itesm.aa.atencionatizapan.R
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.LluviaData
-/** @author:
+import mx.itesm.aa.atencionatizapan.model.interfaces.ListenerRecycler
+
+/** @author: Eduardo Joel Cortez Valente
  *  Vista del adaptador de lluvia
  */
 class AdaptadorLluvia(val context: Context,
-                      var arrEventos: Array<LluviaData>):
+                      var arrEventos: Array<LluviaData>,
+                      var listener: ListenerRecycler? = null):
     RecyclerView.Adapter<AdaptadorLluvia.RenglonEvento>() {
 
 
@@ -28,6 +31,10 @@ class AdaptadorLluvia(val context: Context,
     override fun onBindViewHolder(holder: RenglonEvento, position: Int) {
         val evento = arrEventos[position]
         holder.set(evento)
+
+        holder.renglonEvento.setOnClickListener {
+            listener?.itemClicked(position)
+        }
     }
 
     // El numero de renglones que tendra el recyclerview

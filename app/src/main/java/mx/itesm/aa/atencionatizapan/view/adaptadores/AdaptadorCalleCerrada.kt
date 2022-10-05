@@ -8,13 +8,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import mx.itesm.aa.atencionatizapan.R
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.CalleCerradaData
+import mx.itesm.aa.atencionatizapan.model.interfaces.ListenerRecycler
 
 /** @author:
  *  Vista del adaptador de calle cerrada
  */
 
 class AdaptadorCalleCerrada (val context: Context,
-                             var arrEventos: Array<CalleCerradaData>):
+                             var arrEventos: Array<CalleCerradaData>,
+                             var listener: ListenerRecycler? = null):
     RecyclerView.Adapter<AdaptadorCalleCerrada.RenglonEvento>() {
 
 
@@ -30,6 +32,10 @@ class AdaptadorCalleCerrada (val context: Context,
     override fun onBindViewHolder(holder: RenglonEvento, position: Int) {
         val evento = arrEventos[position]
         holder.set(evento)
+
+        holder.renglonEvento.setOnClickListener {
+            listener?.itemClicked(position)
+        }
     }
 
     // El numero de renglones que tendra el recyclerview
