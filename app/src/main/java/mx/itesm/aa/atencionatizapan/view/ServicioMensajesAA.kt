@@ -39,7 +39,7 @@ class ServicioMensajesAA : FirebaseMessagingService()
     // Funcion que genera una notificación
     private fun generarNotificacion(message: RemoteMessage) {
         // Abre la app
-        val intent = Intent(this, PrincipalFrag::class.java) // Abre la actividad que tiene el fragment
+        val intent = Intent(this, MainActivity::class.java) // Abre la actividad que tiene el fragment
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) // Borrar el historial. No meter a la pila. Cuando le de back, regresa
         // al sistema operativo
 
@@ -69,7 +69,7 @@ class ServicioMensajesAA : FirebaseMessagingService()
     private fun crearVistaRemota(message: RemoteMessage): RemoteViews {
         val titulo = message.notification?.title!!
         val mensaje = message.notification?.body!!
-        val vistaRemota = RemoteViews("mx.itesm.aa.atencionatizapan.view", R.layout.notificacion) // Abre val, construye notificación
+        val vistaRemota = RemoteViews("mx.itesm.aa.atencionatizapan", R.layout.notificacion) // Abre val, construye notificación
         vistaRemota.setTextViewText(R.id.constranin, titulo)
         vistaRemota.setTextViewText(R.id.tvMensaje, mensaje)
         vistaRemota.setImageViewResource(R.id.imgIcono, R.drawable.notificacion)
