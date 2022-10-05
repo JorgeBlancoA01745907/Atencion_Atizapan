@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    // Para el paso de argumentos
+    id 'androidx.navigation.safeargs.kotlin'
     id 'com.google.gms.google-services'
 }
 

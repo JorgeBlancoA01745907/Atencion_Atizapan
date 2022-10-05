@@ -6,14 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import mx.itesm.aa.atencionatizapan.databinding.FragmentCalleCerradaBinding
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.CalleCerradaData
+import mx.itesm.aa.atencionatizapan.model.interfaces.ListenerRecycler
 import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorCalleCerrada
 import mx.itesm.aa.atencionatizapan.viewmodel.descargarHistoriales.ListaCalleCerradaVM
 
-class CalleCerradaFrag : Fragment() {
+/** @author: Eduardo Joel Cortez Valente
+ * Fragmento que representa la pantalla con el historial de calle cerrada
+ */
+
+
+class CalleCerradaFrag : Fragment(), ListenerRecycler {
 
     private lateinit var binding: FragmentCalleCerradaBinding
 
@@ -56,11 +63,18 @@ class CalleCerradaFrag : Fragment() {
         val layout = LinearLayoutManager(requireContext())
         //ya no se declara adaptador porque ya es una variable de instancia
         adaptador = AdaptadorCalleCerrada(requireContext(), arrEventos)
+        adaptador?.listener = this
         binding.rvEventos.adapter = adaptador
         binding.rvEventos.layoutManager = layout
         // Separador (linea con orientacion de rv)
         val separador = DividerItemDecoration(requireContext(), layout.orientation)
         binding.rvEventos.addItemDecoration(separador)
+    }
+
+    override fun itemClicked(position: Int) {
+        val callecerrada = adaptador.arrEventos[position]
+        val accion = CalleCerradaFragDirections.actionCalleCerradaFragToInfoCalleFragment(callecerrada)
+        findNavController().navigate(accion)
     }
 
 }

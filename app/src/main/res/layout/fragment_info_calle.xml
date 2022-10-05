@@ -55,7 +55,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/infoCalle"
+                android:id="@+id/infoHumedad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Calle"
@@ -63,7 +63,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
             <TextView
-                android:id="@+id/infoCP"
+                android:id="@+id/infoVolumen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CP"
@@ -71,7 +71,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
             <TextView
-                android:id="@+id/infoColonia"
+                android:id="@+id/infoViento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Colonia"

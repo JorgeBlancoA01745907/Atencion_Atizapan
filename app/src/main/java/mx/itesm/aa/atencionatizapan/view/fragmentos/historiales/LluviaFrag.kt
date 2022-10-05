@@ -6,15 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import mx.itesm.aa.atencionatizapan.databinding.FragmentLluviaBinding
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.LluviaData
+import mx.itesm.aa.atencionatizapan.model.interfaces.ListenerRecycler
+import mx.itesm.aa.atencionatizapan.view.PrincipalFragDirections
 import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorLluvia
 import mx.itesm.aa.atencionatizapan.viewmodel.descargarHistoriales.ListaLluviaVM
 
+/** @author: Eduardo Joel Cortez Valente
+ * Fragmento que representa la pantalla con el historial de lluvia
+ */
 
-class LluviaFrag : Fragment() {
+class LluviaFrag : Fragment(), ListenerRecycler {
 
     private lateinit var binding: FragmentLluviaBinding
 
@@ -57,11 +63,18 @@ class LluviaFrag : Fragment() {
         val layout = LinearLayoutManager(requireContext())
         //ya no se declara adaptador porque ya es una variable de instancia
         adaptador = AdaptadorLluvia(requireContext(), arrEventos)
+        adaptador?.listener = this
         binding.rvEventos.adapter = adaptador
         binding.rvEventos.layoutManager = layout
         // Separador (linea con orientacion de rv)
         val separador = DividerItemDecoration(requireContext(), layout.orientation)
         binding.rvEventos.addItemDecoration(separador)
+    }
+
+    override fun itemClicked(position: Int) {
+        val lluvia = adaptador.arrEventos[position]
+        val accion = LluviaFragDirections.actionLluviaFragToInfoLluviaFragment(lluvia)
+        findNavController().navigate(accion)
     }
 
 }

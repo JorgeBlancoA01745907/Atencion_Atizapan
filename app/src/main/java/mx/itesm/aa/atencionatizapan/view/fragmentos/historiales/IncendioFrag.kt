@@ -6,14 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import mx.itesm.aa.atencionatizapan.databinding.FragmentIncendioBinding
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.IncendioData
+import mx.itesm.aa.atencionatizapan.model.interfaces.ListenerRecycler
 import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorIncendio
 import mx.itesm.aa.atencionatizapan.viewmodel.descargarHistoriales.ListaIncendioVM
 
-class IncendioFrag : Fragment() {
+class IncendioFrag : Fragment(), ListenerRecycler {
 
     private lateinit var binding: FragmentIncendioBinding
 
@@ -56,11 +58,18 @@ class IncendioFrag : Fragment() {
         val layout = LinearLayoutManager(requireContext())
         //ya no se declara adaptador porque ya es una variable de instancia
         adaptador = AdaptadorIncendio(requireContext(), arrEventos)
+        adaptador?.listener = this
         binding.rvEventos.adapter = adaptador
         binding.rvEventos.layoutManager = layout
         // Separador (linea con orientacion de rv)
         val separador = DividerItemDecoration(requireContext(), layout.orientation)
         binding.rvEventos.addItemDecoration(separador)
+    }
+
+    override fun itemClicked(position: Int) {
+        val incendio = adaptador.arrEventos[position]
+        val accion = IncendioFragDirections.actionIncendioFragToInfoIncendioFragment(incendio)
+        findNavController().navigate(accion)
     }
 
 }

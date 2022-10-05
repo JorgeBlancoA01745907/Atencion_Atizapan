@@ -6,28 +6,46 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.navArgs
 import mx.itesm.aa.atencionatizapan.viewmodel.info.InfoInundacionViewModel
 import mx.itesm.aa.atencionatizapan.R
+import mx.itesm.aa.atencionatizapan.databinding.FragmentInfoInundacionBinding
+import mx.itesm.aa.atencionatizapan.viewmodel.info.InfoIncendioViewModel
 
 class InfoInundacionFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = InfoInundacionFragment()
-    }
+    private lateinit var binding: FragmentInfoInundacionBinding
 
-    private lateinit var viewModel: InfoInundacionViewModel
+    private lateinit var viewModel: InfoIncendioViewModel
+
+    private val args: InfoInundacionFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_info_inundacion, container, false)
+        binding = FragmentInfoInundacionBinding.inflate(layoutInflater)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(InfoInundacionViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        configurarObservables()
     }
+
+    private fun configurarObservables() {
+        val calle = args.inundacion.calle
+        val cp = args.inundacion.cp
+        val colonia = args.inundacion.colonia
+        val fecha = args.inundacion.fecha
+        val hora = args.inundacion.hora
+
+        binding.infoHumedad.text = "Calle: $calle"
+        binding.infoVolumen.text = "Codigo Postal: $cp"
+        binding.infoViento.text = "Colonia: $colonia"
+        binding.infoFecha.text = "Fecha: $fecha"
+        binding.infoHora.text = "Hora: $hora"
+    }
+
 
 }
