@@ -8,13 +8,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import mx.itesm.aa.atencionatizapan.R
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.IncendioData
+import mx.itesm.aa.atencionatizapan.model.interfaces.ListenerRecycler
 
 /** @author:
  *  Vista del adaptador de Incendio
  */
 
 class AdaptadorIncendio (val context: Context,
-                         var arrEventos: Array<IncendioData>):
+                         var arrEventos: Array<IncendioData>,
+                         var listener: ListenerRecycler? = null):
     RecyclerView.Adapter<AdaptadorIncendio.RenglonEvento>() {
 
 
@@ -30,6 +32,10 @@ class AdaptadorIncendio (val context: Context,
     override fun onBindViewHolder(holder: RenglonEvento, position: Int) {
         val evento = arrEventos[position]
         holder.set(evento)
+
+        holder.renglonEvento.setOnClickListener {
+            listener?.itemClicked(position)
+        }
     }
 
     // El numero de renglones que tendra el recyclerview
