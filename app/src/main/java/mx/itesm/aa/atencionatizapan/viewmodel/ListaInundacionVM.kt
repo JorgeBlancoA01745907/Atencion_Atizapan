@@ -1,9 +1,9 @@
-package mx.itesm.aa.atencionatizapan.viewmodel.descargarHistoriales
+package mx.itesm.aa.atencionatizapan.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.CalleCerradaData
-import mx.itesm.aa.atencionatizapan.model.interfaces.ServicioCalleCAPI
+import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.InundacionData
+import mx.itesm.aa.atencionatizapan.model.interfaces.ServicioInundacionAPI
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -11,10 +11,10 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 /** @author:
- *  ViewModel de Calle Cerrada
+ *  ViewModel de Inundación
  */
 
-class ListaCalleCerradaVM : ViewModel() {
+class ListaInundacionVM : ViewModel() {
     private val retrofit by lazy {  // El objeto retrofit para instanciar el objeto que se conecta a la red y accede a los servicios definidos
         Retrofit.Builder()
             .baseUrl("http://143.110.228.198/") //pagina base
@@ -23,25 +23,25 @@ class ListaCalleCerradaVM : ViewModel() {
     }
 
     // Instancia que crea el objeto que realiza la descarga
-    private val servicioCalleCAPI by lazy {
-        retrofit.create(ServicioCalleCAPI::class.java)
+    private val servicioInundacionAPI by lazy {
+        retrofit.create(ServicioInundacionAPI::class.java)
     }
 
     //Observables
-    val listaCalleC = MutableLiveData<List<CalleCerradaData>>()
+    val listaInundacion = MutableLiveData<List<InundacionData>>()
 
     //Interfaz
-    fun descargarDatosCalleCerrada() {
-        val call = servicioCalleCAPI.descargarDatosCalleCerrada()
-        call.enqueue(object: Callback<List<CalleCerradaData>> {
-            override fun onResponse(call: Call<List<CalleCerradaData>>, response: Response<List<CalleCerradaData>>) {
+    fun descargarDatosInundacion() {
+        val call = servicioInundacionAPI.descargarDatosInundacion()
+        call.enqueue(object: Callback<List<InundacionData>> {
+            override fun onResponse(call: Call<List<InundacionData>>, response: Response<List<InundacionData>>) {
                 if (response.isSuccessful) {
-                    listaCalleC.value = response.body()
+                    listaInundacion.value = response.body()
                 } else {
                     println("Error en los datos: ${response.message()}")
                 }
             }
-            override fun onFailure(call: Call<List<CalleCerradaData>>, t: Throwable) {
+            override fun onFailure(call: Call<List<InundacionData>>, t: Throwable) {
                 println("Error en la descarga: ${t.localizedMessage}")
             }
         })

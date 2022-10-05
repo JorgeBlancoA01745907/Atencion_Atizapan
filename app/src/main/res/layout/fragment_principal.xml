@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragmentos.historiales.InundacionFrag"
-    android:background="?android:attr/selectableItemBackground"
-    android:scaleType="fitCenter">
+    tools:context=".view.fragmentos.InundacionFrag">
 
     <ImageView
         android:id="@+id/imageView5"
@@ -29,19 +27,22 @@
         android:layout_width="136dp"
         android:layout_height="105dp"
         android:layout_marginStart="4dp"
+        android:layout_marginTop="624dp"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="104dp"
-        android:layout_height="99dp"
+        android:layout_width="118dp"
+        android:layout_height="118dp"
         android:src="@drawable/todo_bien"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/text_calle"
@@ -51,7 +52,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="monospace"
-        android:text="¡Hola!"
+        android:text="¡Buenas Tardes!"
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -60,12 +61,14 @@
         app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="351dp"
-        android:layout_height="403dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/imgLogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_calle">
@@ -78,16 +81,14 @@
             <ImageButton
                 android:id="@+id/ibLluvia"
                 android:layout_width="match_parent"
-                android:layout_height="214dp"
-                android:backgroundTint="#00FFFFFF"
+                android:layout_height="253dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/boton_lluvia" />
 
             <ImageButton
                 android:id="@+id/ibIncendio"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#00FFFFFF"
+                android:layout_height="254dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/boton_incendio" />
         </LinearLayout>
@@ -99,17 +100,15 @@
 
             <ImageButton
                 android:id="@+id/ibCalle"
-                android:layout_width="182dp"
-                android:layout_height="213dp"
-                android:backgroundTint="#00FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="252dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/boton_calle" />
 
             <ImageButton
                 android:id="@+id/ibInundacion"
-                android:layout_width="182dp"
-                android:layout_height="180dp"
-                android:backgroundTint="#00FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:scaleType="centerInside"
                 android:src="@drawable/boton_inundacion" />
         </LinearLayout>

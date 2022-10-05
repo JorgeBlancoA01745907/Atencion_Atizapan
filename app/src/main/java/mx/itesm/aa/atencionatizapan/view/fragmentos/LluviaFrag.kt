@@ -1,4 +1,4 @@
-package mx.itesm.aa.atencionatizapan.view.fragmentos.historiales
+package mx.itesm.aa.atencionatizapan.view.fragmentos
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,34 +6,28 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import mx.itesm.aa.atencionatizapan.databinding.FragmentCalleCerradaBinding
-import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.CalleCerradaData
-import mx.itesm.aa.atencionatizapan.model.interfaces.ListenerRecycler
-import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorCalleCerrada
-import mx.itesm.aa.atencionatizapan.viewmodel.descargarHistoriales.ListaCalleCerradaVM
-
-/** @author: Eduardo Joel Cortez Valente
- * Fragmento que representa la pantalla con el historial de calle cerrada
- */
+import mx.itesm.aa.atencionatizapan.databinding.FragmentLluviaBinding
+import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.LluviaData
+import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorLluvia
+import mx.itesm.aa.atencionatizapan.viewmodel.ListaLluviaVM
 
 
-class CalleCerradaFrag : Fragment(), ListenerRecycler {
+class LluviaFrag : Fragment() {
 
-    private lateinit var binding: FragmentCalleCerradaBinding
+    private lateinit var binding: FragmentLluviaBinding
 
-    private val calleCerradaVM: ListaCalleCerradaVM by viewModels()
+    private val lluviaVM: ListaLluviaVM by viewModels()
 
-    private lateinit var adaptador: AdaptadorCalleCerrada
+    private lateinit var adaptador: AdaptadorLluvia
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         //return inflater.inflate(R.layout.fragment_costo, container, false)
-        binding = FragmentCalleCerradaBinding.inflate(layoutInflater)
+        binding = FragmentLluviaBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -46,12 +40,12 @@ class CalleCerradaFrag : Fragment(), ListenerRecycler {
 
     override fun onStart() {
         super.onStart()
-        calleCerradaVM.descargarDatosCalleCerrada()
+        lluviaVM.descargarDatosLluvia()
         configurarObservables()
     }
 
     private fun configurarObservables() {
-        calleCerradaVM.listaCalleC.observe(viewLifecycleOwner){lista ->
+        lluviaVM.listaLluvia.observe(viewLifecycleOwner){lista ->
             val arrEventos = lista.toTypedArray()
             adaptador.arrEventos = arrEventos //se cambia la fuente de datos
             adaptador.notifyDataSetChanged() // RECARGA todo
@@ -59,22 +53,15 @@ class CalleCerradaFrag : Fragment(), ListenerRecycler {
     }
 
     private fun configurarRV() {
-        val arrEventos = arrayOf(CalleCerradaData(5, "Prado", "152674", "Echegaray", 1.5, "15/03/2022", "15:02:25"))
+        val arrEventos = arrayOf(LluviaData(1, 3.11, 4.1, 2.1, 2.1, "17/02/2022", "02:32:02"))
         val layout = LinearLayoutManager(requireContext())
         //ya no se declara adaptador porque ya es una variable de instancia
-        adaptador = AdaptadorCalleCerrada(requireContext(), arrEventos)
-        adaptador?.listener = this
+        adaptador = AdaptadorLluvia(requireContext(), arrEventos)
         binding.rvEventos.adapter = adaptador
         binding.rvEventos.layoutManager = layout
         // Separador (linea con orientacion de rv)
         val separador = DividerItemDecoration(requireContext(), layout.orientation)
         binding.rvEventos.addItemDecoration(separador)
-    }
-
-    override fun itemClicked(position: Int) {
-        val callecerrada = adaptador.arrEventos[position]
-        val accion = CalleCerradaFragDirections.actionCalleCerradaFragToInfoCalleFragment(callecerrada)
-        findNavController().navigate(accion)
     }
 
 }
