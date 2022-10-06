@@ -5,7 +5,14 @@
       <map>
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/fragment_calle_cerrada.xml" value="0.25416666666666665" />
+<<<<<<< Updated upstream
+=======
+        <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/fragment_contactos.xml" value="0.25416666666666665" />
+        <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/fragment_creditos.xml" value="0.25416666666666665" />
+        <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/fragment_dashboard.xml" value="0.25416666666666665" />
+>>>>>>> Stashed changes
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/fragment_historial.xml" value="0.25416666666666665" />
+        <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/fragment_incendio.xml" value="0.25416666666666665" />
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/fragment_info_calle.xml" value="0.25416666666666665" />
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/fragment_info_incendio.xml" value="0.264" />
@@ -13,6 +20,7 @@
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/fragment_info_lluvia.xml" value="0.264" />
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/fragment_inundacion.xml" value="0.25416666666666665" />
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/fragment_lluvia.xml" value="0.25416666666666665" />
+        <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/fragment_notifications.xml" value="0.25416666666666665" />
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/fragment_principal.xml" value="0.25416666666666665" />
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/historial.xml" value="0.253125" />
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/renglon_evento.xml" value="0.25" />
