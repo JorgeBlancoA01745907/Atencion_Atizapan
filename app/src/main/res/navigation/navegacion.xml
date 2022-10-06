@@ -95,14 +95,4 @@
             android:name="callecerrada"
             app:argType="mx.itesm.aa.atencionatizapan.model.clasesDataEventos.CalleCerradaData" />
     </fragment>
-    <fragment
-        android:id="@+id/contactosFrag"
-        android:name="mx.itesm.aa.atencionatizapan.contactosFrag"
-        android:label="fragment_contactos"
-        tools:layout="@layout/fragment_contactos" />
-    <fragment
-        android:id="@+id/creditosFrag"
-        android:name="mx.itesm.aa.atencionatizapan.creditosFrag"
-        android:label="fragment_creditos"
-        tools:layout="@layout/fragment_creditos" />
 </navigation>

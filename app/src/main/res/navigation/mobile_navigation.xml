@@ -5,22 +5,15 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/navegacion">
 
-    <fragment
-        android:id="@+id/principalFrag"
-        android:name="mx.itesm.aa.atencionatizapan.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
-
-    <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="mx.itesm.aa.atencionatizapan.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="mx.itesm.aa.atencionatizapan.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
     <include app:graph="@navigation/navegacion" />
+    <fragment
+        android:id="@+id/contactosFrag"
+        android:name="mx.itesm.aa.atencionatizapan.contactosFrag"
+        android:label="fragment_contactos"
+        tools:layout="@layout/fragment_contactos" />
+    <fragment
+        android:id="@+id/creditosFrag"
+        android:name="mx.itesm.aa.atencionatizapan.creditosFrag"
+        android:label="fragment_creditos"
+        tools:layout="@layout/fragment_creditos" />
 </navigation>
