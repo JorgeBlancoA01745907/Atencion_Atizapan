@@ -49,7 +49,7 @@ class AdaptadorLluvia(val context: Context,
             val tituloEvento = renglonEvento.findViewById<TextView>(R.id.tituloEvento)
             val fechaEvento = renglonEvento.findViewById<TextView>(R.id.fechaEvento)
             val horaEvento = renglonEvento.findViewById<TextView>(R.id.horaEvento)
-            tituloEvento.text = "Humedad: " + evento.volumen.toString() + "%"
+            tituloEvento.text = "Volumen: " + evento.volumen.toString() + " mm"
             fechaEvento.text = "Fecha: " + evento.fecha
             horaEvento.text = "Hora: " + evento.hora
 

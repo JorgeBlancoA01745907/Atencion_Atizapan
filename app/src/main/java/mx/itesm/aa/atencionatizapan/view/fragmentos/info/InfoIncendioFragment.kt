@@ -42,11 +42,11 @@ class InfoIncendioFragment : Fragment() {
         val fecha = args.incendio.fecha
         val hora = args.incendio.hora
 
-        binding.infoHumedad.text = "Calle: $calle"
-        binding.infoVolumen.text = "Codigo Postal: $cp"
-        binding.infoViento.text = "Colonia: $colonia"
-        binding.infoFecha.text = "Fecha: $fecha"
-        binding.infoHora.text = "Hora: $hora"
+        binding.infoCalleIncendio.text = "$calle"
+        binding.infoCPIncendio.text = "$cp"
+        binding.infoColoniaIncendio.text = "$colonia"
+        binding.infoFechaIncendio.text = "$fecha"
+        binding.infoHoraIncendio.text = "$hora"
     }
 
 }

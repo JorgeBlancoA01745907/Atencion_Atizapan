@@ -43,7 +43,8 @@
         app:layout_constraintTop_toBottomOf="@+id/iconoInfoInundacion">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/LinearLayoutStatic"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -51,47 +52,100 @@
                 android:id="@+id/infoHumedad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Calle"
+                android:text="Calle: "
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/infoVolumen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CP"
+                android:text="CP: "
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/infoViento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Colonia"
+                android:text="Colonia: "
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/infoFecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fecha"
+                android:text="Fecha: "
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/infoHora"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hora"
+                android:text="Hora: "
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LineatLayoutDynamic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/infoCalleInundacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/infoCPInundacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/infoColoniaInundacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/infoFechaInundacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/infoHoraInundacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <ImageView

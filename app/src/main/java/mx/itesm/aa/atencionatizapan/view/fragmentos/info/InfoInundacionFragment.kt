@@ -40,11 +40,11 @@ class InfoInundacionFragment : Fragment() {
         val fecha = args.inundacion.fecha
         val hora = args.inundacion.hora
 
-        binding.infoHumedad.text = "Calle: $calle"
-        binding.infoVolumen.text = "Codigo Postal: $cp"
-        binding.infoViento.text = "Colonia: $colonia"
-        binding.infoFecha.text = "Fecha: $fecha"
-        binding.infoHora.text = "Hora: $hora"
+        binding.infoCalleInundacion.text = "$calle"
+        binding.infoCPInundacion.text = "$cp"
+        binding.infoColoniaInundacion.text = "$colonia"
+        binding.infoFechaInundacion.text = "$fecha"
+        binding.infoHoraInundacion.text = "$hora"
     }
 
 

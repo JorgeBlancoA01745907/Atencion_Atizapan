@@ -121,12 +121,12 @@
 
         <LinearLayout
             android:id="@+id/LineatLayoutDynamic"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/infoHumedad2"
+                android:id="@+id/infoHumedadLluvia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
@@ -135,7 +135,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/infoVolumen2"
+                android:id="@+id/infoVolumenLluvia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
@@ -144,7 +144,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/infoViento2"
+                android:id="@+id/infoVientoLluvia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
@@ -153,7 +153,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/infoTemperatura2"
+                android:id="@+id/infoTemperaturaLluvia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
@@ -162,7 +162,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/infoFecha2"
+                android:id="@+id/infoFechaLluvia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
@@ -171,7 +171,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/infoHora2"
+                android:id="@+id/infoHoraLluvia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
