@@ -41,12 +41,12 @@ class InfoLluviaFragment : Fragment() {
         val temperatura = args.lluvia.temperatura
         val fecha = args.lluvia.fecha
         val hora = args.lluvia.hora
-        binding.infoHumedad.text = "Humedad: ${humedad.toString()} %"
-        binding.infoVolumen.text = "Volumen: ${volumen.toString()} mm de agua"
-        binding.infoViento.text = "Viento: ${viento.toString()} km/h"
-        binding.infoTemperatura.text = "Temperatura: ${temperatura.toString()} °C"
-        binding.infoFecha.text = "Fecha: $fecha"
-        binding.infoHora.text = "Hora: $hora"
+        binding.infoHumedad2.text = "${humedad.toString()} %"
+        binding.infoVolumen2.text = "${volumen.toString()} mm"
+        binding.infoViento2.text = "${viento.toString()} km/h"
+        binding.infoTemperatura2.text = "${temperatura.toString()} °C"
+        binding.infoFecha2.text = "$fecha"
+        binding.infoHora2.text = "$hora"
     }
 
 }
