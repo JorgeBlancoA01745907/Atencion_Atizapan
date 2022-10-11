@@ -2,117 +2,94 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragmentos.historiales.InundacionFrag"
-    android:background="?android:attr/selectableItemBackground"
-    android:scaleType="fitCenter">
+    android:background="@drawable/gradient_list"
+    android:scaleType="fitCenter"
+    tools:context=".view.fragmentos.historiales.InundacionFrag">
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="false"
-        android:alpha="0.5"
-        android:background="@drawable/monumento_atizapan"
-        android:scaleType="centerCrop"
+        android:id="@+id/imageView2"
+        android:layout_width="481dp"
+        android:layout_height="871dp"
+        android:src="@drawable/fondo_solo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="136dp"
-        android:layout_height="105dp"
-        android:layout_marginStart="4dp"
+        android:layout_width="240dp"
+        android:layout_height="224dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="104dp"
-        android:layout_height="99dp"
-        android:src="@drawable/todo_bien"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_calle" />
 
     <TextView
         android:id="@+id/text_calle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="monospace"
         android:text="¡Hola!"
         android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#E46A38"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+        tools:layout_editor_absoluteY="24dp" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="351dp"
-        android:layout_height="403dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:orientation="horizontal"
+        android:layout_width="316dp"
+        android:layout_height="314dp"
+        android:layout_marginTop="300dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_calle">
 
-        <LinearLayout
-            android:layout_width="180dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/ibLluvia"
+            android:layout_width="304dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="centerInside"
+            android:src="@drawable/lluvia_new" />
 
-            <ImageButton
-                android:id="@+id/ibLluvia"
-                android:layout_width="match_parent"
-                android:layout_height="214dp"
-                android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerInside"
-                android:src="@drawable/boton_lluvia" />
+        <ImageButton
+            android:id="@+id/ibInundacion"
+            android:layout_width="304dp"
+            android:layout_height="66dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="centerInside"
+            android:src="@drawable/inundacion_new" />
 
-            <ImageButton
-                android:id="@+id/ibIncendio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerInside"
-                android:src="@drawable/boton_incendio" />
-        </LinearLayout>
+        <ImageButton
+            android:id="@+id/ibIncendio"
+            android:layout_width="306dp"
+            android:layout_height="64dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="centerInside"
+            android:src="@drawable/incendio_new" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/ibCalle"
-                android:layout_width="182dp"
-                android:layout_height="213dp"
-                android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerInside"
-                android:src="@drawable/boton_calle" />
-
-            <ImageButton
-                android:id="@+id/ibInundacion"
-                android:layout_width="182dp"
-                android:layout_height="180dp"
-                android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerInside"
-                android:src="@drawable/boton_inundacion" />
-        </LinearLayout>
+        <ImageButton
+            android:id="@+id/ibCalle"
+            android:layout_width="307dp"
+            android:layout_height="64dp"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="centerInside"
+            android:src="@drawable/callecerrada_new" />
     </LinearLayout>
 
 
