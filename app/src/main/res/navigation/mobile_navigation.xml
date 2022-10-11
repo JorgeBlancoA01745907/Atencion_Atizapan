@@ -25,12 +25,12 @@
     <include app:graph="@navigation/navegacion" />
     <fragment
         android:id="@+id/contactosFrag"
-        android:name="mx.itesm.aa.atencionatizapan.contactosFrag"
+        android:name="mx.itesm.aa.atencionatizapan.view.fragmentos.contactosFrag"
         android:label="fragment_contactos"
         tools:layout="@layout/fragment_contactos" />
     <fragment
         android:id="@+id/creditosFrag"
-        android:name="mx.itesm.aa.atencionatizapan.creditosFrag"
+        android:name="mx.itesm.aa.atencionatizapan.view.fragmentos.creditosFrag"
         android:label="fragment_creditos"
         tools:layout="@layout/fragment_creditos" />
 </navigation>

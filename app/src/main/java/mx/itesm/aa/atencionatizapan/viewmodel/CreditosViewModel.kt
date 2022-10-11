@@ -1,4 +1,4 @@
-package mx.itesm.aa.atencionatizapan
+package mx.itesm.aa.atencionatizapan.viewmodel
 
 import androidx.lifecycle.ViewModel
 
