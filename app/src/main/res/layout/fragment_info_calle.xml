@@ -5,6 +5,7 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
     tools:context=".view.fragmentos.info.InfoCalleFragment">
 
     <ImageView
@@ -14,28 +15,20 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="@+id/imgFondo2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <ImageView
-        android:id="@+id/imgFondo2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="false"
-        android:alpha="0.5"
-        android:background="@drawable/monumento_atizapan"
-        android:scaleType="centerCrop"
+        android:id="@+id/imageView8"
+        android:layout_width="481dp"
+        android:layout_height="871dp"
+        android:src="@drawable/fondo_solo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -60,7 +53,8 @@
                 android:layout_height="wrap_content"
                 android:text="Calle"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/infoVolumen"
@@ -68,7 +62,8 @@
                 android:layout_height="wrap_content"
                 android:text="CP"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/infoViento"
@@ -76,7 +71,8 @@
                 android:layout_height="wrap_content"
                 android:text="Colonia"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/infoTiempo"
@@ -84,7 +80,8 @@
                 android:layout_height="wrap_content"
                 android:text="Tiempo"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/infoFecha"
@@ -92,7 +89,8 @@
                 android:layout_height="wrap_content"
                 android:text="Fecha"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/infoHora"
@@ -100,7 +98,8 @@
                 android:layout_height="wrap_content"
                 android:text="Hora"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
     </LinearLayout>
 

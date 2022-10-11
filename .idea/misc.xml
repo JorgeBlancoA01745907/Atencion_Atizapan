@@ -51,7 +51,9 @@
         <entry key="app/src/main/res/drawable/background_2.xml" value="0.2545" />
         <entry key="app/src/main/res/drawable/background_3.xml" value="0.2545" />
         <entry key="app/src/main/res/drawable/gradient_list.xml" value="0.2545" />
-        <entry key="app/src/main/res/layout/fragment_info_calle.xml" value="0.124169921875" />
+        <entry key="app/src/main/res/layout/fragment_info_calle.xml" value="0.2979583740234375" />
+        <entry key="app/src/main/res/layout/fragment_info_incendio.xml" value="0.32565769803696787" />
+        <entry key="app/src/main/res/layout/fragment_info_inundacion.xml" value="0.23550724637681159" />
         <entry key="app/src/main/res/layout/fragment_info_lluvia.xml" value="0.23550724637681159" />
         <entry key="app/src/main/res/layout/fragment_lluvia.xml" value="0.25186767578125" />
         <entry key="app/src/main/res/layout/fragment_principal.xml" value="0.22632441665187025" />
