@@ -1,10 +1,12 @@
 package mx.itesm.aa.atencionatizapan.view.fragmentos.info
 
+import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.fragment.navArgs
 import mx.itesm.aa.atencionatizapan.viewmodel.info.InfoCalleViewModel
 import mx.itesm.aa.atencionatizapan.databinding.FragmentInfoCalleBinding
@@ -32,6 +34,11 @@ class InfoCalleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         configurarObservables()
+        val constraintLayout: ConstraintLayout = binding.mainLayout
+        val animationDrawable: AnimationDrawable = constraintLayout.background as AnimationDrawable
+        animationDrawable.setEnterFadeDuration(2500)
+        animationDrawable.setExitFadeDuration(5000)
+        animationDrawable.start()
     }
 
     private fun configurarObservables() {

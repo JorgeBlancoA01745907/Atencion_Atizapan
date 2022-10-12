@@ -40,6 +40,11 @@ class IncendioFrag : Fragment(), ListenerRecycler {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         configurarRV()
+        val constraintLayout: ConstraintLayout = binding.mainLayout
+        val animationDrawable: AnimationDrawable = constraintLayout.background as AnimationDrawable
+        animationDrawable.setEnterFadeDuration(2500)
+        animationDrawable.setExitFadeDuration(5000)
+        animationDrawable.start()
     }
 
     override fun onStart() {

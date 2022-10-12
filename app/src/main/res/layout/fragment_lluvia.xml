@@ -24,6 +24,7 @@
 
     <ImageView
         android:id="@+id/imgFondoLluvia"
+        android:alpha="0.8"
         android:layout_width="481dp"
         android:layout_height="871dp"
         android:src="@drawable/fondo_solo"
@@ -39,7 +40,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
-        android:fontFamily="serif"
+        android:fontFamily="@font/ciutadella_rounded"
         android:text="Historial Lluvia "
         android:textAlignment="center"
         android:textColor="#e46a38"
