@@ -1,14 +1,17 @@
 package mx.itesm.aa.atencionatizapan.view.fragmentos.historiales
 
+import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import mx.itesm.aa.atencionatizapan.R
 import mx.itesm.aa.atencionatizapan.databinding.FragmentLluviaBinding
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.LluviaData
 import mx.itesm.aa.atencionatizapan.model.interfaces.ListenerRecycler
@@ -35,6 +38,8 @@ class LluviaFrag : Fragment(), ListenerRecycler {
         //return inflater.inflate(R.layout.fragment_costo, container, false)
         binding = FragmentLluviaBinding.inflate(layoutInflater)
         return binding.root
+
+
     }
 
 
@@ -42,6 +47,11 @@ class LluviaFrag : Fragment(), ListenerRecycler {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         configurarRV()
+        val constraintLayout: ConstraintLayout = binding.mainLayout
+        val animationDrawable: AnimationDrawable = constraintLayout.background as AnimationDrawable
+        animationDrawable.setEnterFadeDuration(2500)
+        animationDrawable.setExitFadeDuration(5000)
+        animationDrawable.start()
     }
 
     override fun onStart() {
