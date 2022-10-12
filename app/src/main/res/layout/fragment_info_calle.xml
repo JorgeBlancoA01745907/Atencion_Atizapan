@@ -9,18 +9,6 @@
     tools:context=".view.fragmentos.info.InfoCalleFragment">
 
     <ImageView
-        android:id="@+id/imgLogo2"
-        android:layout_width="136dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:src="@drawable/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
-
-    <ImageView
         android:id="@+id/imageView8"
         android:layout_width="481dp"
         android:layout_height="871dp"
@@ -30,11 +18,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/iconoInfoCalle"
+        android:layout_width="182dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/calle_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:orientation="horizontal"
@@ -51,62 +49,62 @@
             <TextView
                 android:id="@+id/infoHumedad"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="Calle: "
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoVolumen"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="CP: "
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoViento"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="Colonia: "
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoTiempo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="Tiempo cerrada: "
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoFecha"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="Fecha: "
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoHora"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="Hora: "
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -118,62 +116,52 @@
             <TextView
                 android:id="@+id/infoCalleCalle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoCPCalle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoColoniaCalle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoTiempoCalle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoFechaCalle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoHoraCalle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/iconoInfoCalle"
-        android:layout_width="218dp"
-        android:layout_height="197dp"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/calle_info"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

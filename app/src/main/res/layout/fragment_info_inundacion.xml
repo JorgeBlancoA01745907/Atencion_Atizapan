@@ -9,18 +9,6 @@
     tools:context=".view.fragmentos.info.InfoInundacionFragment">
 
     <ImageView
-        android:id="@+id/imgLogo2"
-        android:layout_width="136dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:src="@drawable/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
-
-    <ImageView
         android:id="@+id/imageView5"
         android:layout_width="481dp"
         android:layout_height="871dp"
@@ -30,12 +18,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/iconoInfoInundacion"
+        android:layout_width="208dp"
+        android:layout_height="182dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/inundacion_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="34dp"
         android:layout_marginEnd="32dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,52 +49,52 @@
             <TextView
                 android:id="@+id/infoHumedad"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="Calle: "
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoVolumen"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="CP: "
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoViento"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="Colonia: "
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoFecha"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="Fecha: "
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoHora"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="Hora: "
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -108,54 +106,45 @@
             <TextView
                 android:id="@+id/infoCalleInundacion"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoCPInundacion"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoColoniaInundacion"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoFechaInundacion"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoHoraInundacion"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/iconoInfoInundacion"
-        android:layout_width="222dp"
-        android:layout_height="233dp"
-        android:src="@drawable/inundacion_info"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="32dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
