@@ -7,7 +7,7 @@
     tools:context=".view.fragmentos.creditosFrag">
 
     <ImageView
-        android:id="@+id/imgFondo"
+        android:id="@+id/imgFondo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:adjustViewBounds="false"

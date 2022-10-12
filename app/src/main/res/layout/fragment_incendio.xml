@@ -37,7 +37,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
-        android:fontFamily="monospace"
+        android:fontFamily="serif"
         android:text="Historial Incendio"
         android:textAlignment="center"
         android:textColor="#e46a38"
