@@ -10,7 +10,7 @@
 
     <ImageView
         android:id="@+id/imageNFondoInfoIncendio"
-        android:alpha="0.8"
+        android:alpha="0.7"
         android:layout_width="481dp"
         android:layout_height="871dp"
         android:src="@drawable/fondo_solo"
@@ -29,6 +29,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="315dp"
+        android:layout_height="466dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/marcoincendio2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iconoInfoIncendio" />
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
@@ -36,7 +48,9 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
+        android:background="@drawable/borde_incendio"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iconoInfoIncendio">
@@ -51,50 +65,60 @@
                 android:id="@+id/infoHumedad"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:text="Calle: "
+                android:background="@drawable/borde_incendio"
+                android:fontFamily="serif"
+                android:text=" Calle: "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF"
+                android:textColor="#914E06"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoVolumen"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:text="CP: "
+                android:background="@drawable/borde_incendio"
+                android:fontFamily="serif"
+                android:text=" CP: "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF"
+                android:textColor="#914E06"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoViento"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:text="Colonia: "
+                android:background="@drawable/borde_incendio"
+                android:fontFamily="serif"
+                android:text=" Colonia:  "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF"
+                android:textColor="#914E06"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoFecha"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:text="Fecha: "
+                android:background="@drawable/borde_incendio"
+                android:fontFamily="serif"
+                android:text=" Fecha: "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF"
+                android:textColor="#914E06"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoHora"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:text="Hora: "
+                android:background="@drawable/borde_incendio"
+                android:fontFamily="serif"
+                android:text=" Hora: "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF"
+                android:textColor="#914E06"
                 android:textSize="20sp" />
         </LinearLayout>
 
@@ -108,54 +132,54 @@
                 android:id="@+id/infoCalleIncendio"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
+                android:background="@drawable/borde_incendio"
+                android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#FFFFFF"
+                android:textColor="#914E06"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoCPIncendio"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
+                android:background="@drawable/borde_incendio"
+                android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#FFFFFF"
+                android:textColor="#914E06"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoColoniaIncendio"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
+                android:background="@drawable/borde_incendio"
+                android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#FFFFFF"
+                android:textColor="#914E06"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoFechaIncendio"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
+                android:background="@drawable/borde_incendio"
+                android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#FFFFFF"
+                android:textColor="#914E06"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoHoraIncendio"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
+                android:background="@drawable/borde_incendio"
+                android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#FFFFFF"
+                android:textColor="#914E06"
                 android:textSize="20sp" />
         </LinearLayout>
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="388dp"
-        android:layout_height="389dp"
-        android:src="@drawable/marco_rosa"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

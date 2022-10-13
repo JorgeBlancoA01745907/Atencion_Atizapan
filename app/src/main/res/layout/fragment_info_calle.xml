@@ -10,7 +10,7 @@
 
     <ImageView
         android:id="@+id/imagenFondoInfoCalle"
-        android:alpha="0.8"
+        android:alpha="0.7"
         android:layout_width="481dp"
         android:layout_height="871dp"
         android:src="@drawable/fondo_solo"
@@ -23,21 +23,35 @@
         android:id="@+id/iconoInfoCalle"
         android:layout_width="182dp"
         android:layout_height="152dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/calle_info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="331dp"
+        android:layout_height="412dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/marcocalle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iconoInfoCalle" />
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
         android:layout_marginStart="70dp"
-        android:layout_marginTop="32dp"
+
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
+        android:background="@drawable/borde_calle"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iconoInfoCalle">
@@ -52,60 +66,72 @@
                 android:id="@+id/infoHumedad"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:text="Calle: "
+                android:background="@drawable/borde_calle"
+                android:fontFamily="serif"
+                android:text=" Calle: "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF"
+                android:textColor="#786941"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoVolumen"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:text="CP: "
+                android:background="@drawable/borde_calle"
+                android:fontFamily="serif"
+                android:text=" CP: "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF"
+                android:textColor="#786941"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoViento"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:text="Colonia: "
+                android:background="@drawable/borde_calle"
+                android:fontFamily="serif"
+                android:text=" Colonia: "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF"
+                android:textColor="#786941"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoTiempo"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:text="Tiempo cerrada: "
+                android:background="@drawable/borde_calle"
+                android:fontFamily="serif"
+                android:text=" Tiempo cerrada:  "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF"
+                android:textColor="#786941"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoFecha"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:text="Fecha: "
+                android:background="@drawable/borde_calle"
+                android:fontFamily="serif"
+                android:text=" Fecha: "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF"
+                android:textColor="#786941"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoHora"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:text="Hora: "
+                android:background="@drawable/borde_calle"
+                android:fontFamily="serif"
+                android:text=" Hora: "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF"
+                android:textColor="#786941"
                 android:textSize="20sp" />
         </LinearLayout>
 
@@ -119,48 +145,60 @@
                 android:id="@+id/infoCalleCalle"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
+                android:background="@drawable/borde_calle"
+                android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#FFFFFF"
+                android:textColor="#786941"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoCPCalle"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
+                android:background="@drawable/borde_calle"
+                android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#FFFFFF"
+                android:textColor="#786941"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoColoniaCalle"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
+                android:background="@drawable/borde_calle"
+                android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#FFFFFF"
+                android:textColor="#786941"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoTiempoCalle"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
+                android:background="@drawable/borde_calle"
+                android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#FFFFFF"
+                android:textColor="#786941"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoFechaCalle"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
+                android:background="@drawable/borde_calle"
+                android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#FFFFFF"
+                android:textColor="#786941"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/infoHoraCalle"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
+                android:background="@drawable/borde_calle"
+                android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#FFFFFF"
+                android:textColor="#786941"
                 android:textSize="20sp" />
         </LinearLayout>
 

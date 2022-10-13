@@ -49,12 +49,12 @@ class InfoCalleFragment : Fragment() {
         val fecha = args.callecerrada.fecha
         val hora = args.callecerrada.hora
 
-        binding.infoCalleCalle.text = "$calle"
-        binding.infoCPCalle.text = "$cp"
-        binding.infoColoniaCalle.text = "$colonia"
-        binding.infoTiempoCalle.text = "${tiempo.toString()} horas"
-        binding.infoFechaCalle.text = "$fecha"
-        binding.infoHoraCalle.text = "$hora"
+        binding.infoCalleCalle.text = " $calle"
+        binding.infoCPCalle.text = " $cp"
+        binding.infoColoniaCalle.text = " $colonia"
+        binding.infoTiempoCalle.text = " ${tiempo.toString()} horas"
+        binding.infoFechaCalle.text = " $fecha"
+        binding.infoHoraCalle.text = " $hora"
 
     }
 
