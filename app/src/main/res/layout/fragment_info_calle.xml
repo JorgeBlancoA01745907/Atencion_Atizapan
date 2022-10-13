@@ -71,7 +71,7 @@
                 android:text=" Calle: "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#786941"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
             <TextView
@@ -83,7 +83,7 @@
                 android:text=" CP: "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#786941"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
             <TextView
@@ -95,7 +95,7 @@
                 android:text=" Colonia: "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#786941"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
             <TextView
@@ -107,7 +107,7 @@
                 android:text=" Tiempo cerrada:  "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#786941"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
             <TextView
@@ -119,7 +119,7 @@
                 android:text=" Fecha: "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#786941"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
             <TextView
@@ -131,7 +131,7 @@
                 android:text=" Hora: "
                 android:textAlignment="textStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#786941"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp" />
         </LinearLayout>
 
@@ -148,7 +148,7 @@
                 android:background="@drawable/borde_calle"
                 android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#786941"
+                android:textColor="#FDFDFD"
                 android:textSize="20sp" />
 
             <TextView
@@ -158,7 +158,7 @@
                 android:background="@drawable/borde_calle"
                 android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#786941"
+                android:textColor="#FDFDFD"
                 android:textSize="20sp" />
 
             <TextView
@@ -168,7 +168,7 @@
                 android:background="@drawable/borde_calle"
                 android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#786941"
+                android:textColor="#FDFDFD"
                 android:textSize="20sp" />
 
             <TextView
@@ -178,7 +178,7 @@
                 android:background="@drawable/borde_calle"
                 android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#786941"
+                android:textColor="#FDFDFD"
                 android:textSize="20sp" />
 
             <TextView
@@ -188,7 +188,7 @@
                 android:background="@drawable/borde_calle"
                 android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#786941"
+                android:textColor="#FDFDFD"
                 android:textSize="20sp" />
 
             <TextView
@@ -198,7 +198,7 @@
                 android:background="@drawable/borde_calle"
                 android:fontFamily="serif"
                 android:text="TextView"
-                android:textColor="#786941"
+                android:textColor="#FDFDFD"
                 android:textSize="20sp" />
         </LinearLayout>
 
