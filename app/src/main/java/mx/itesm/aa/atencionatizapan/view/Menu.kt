@@ -46,7 +46,6 @@ class Menu : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         supportActionBar?.hide()
-        println("Escondíbarra")
     }
 
     override fun onSupportNavigateUp(): Boolean {

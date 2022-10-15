@@ -1,4 +1,4 @@
-package mx.itesm.aa.atencionatizapan.view
+package mx.itesm.aa.atencionatizapan.model
 
 import android.annotation.SuppressLint
 import android.app.NotificationChannel
@@ -11,7 +11,7 @@ import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import mx.itesm.aa.atencionatizapan.R
-import mx.itesm.aa.atencionatizapan.view.fragmentos.historiales.CalleCerradaFrag
+import mx.itesm.aa.atencionatizapan.view.MainActivity
 
 /** @author:
  *  Vista del fragmento de servicio de mensajes
