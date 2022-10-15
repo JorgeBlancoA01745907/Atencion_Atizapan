@@ -15,14 +15,13 @@ import mx.itesm.aa.atencionatizapan.R
 import mx.itesm.aa.atencionatizapan.databinding.FragmentLluviaBinding
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.LluviaData
 import mx.itesm.aa.atencionatizapan.model.interfaces.ListenerRecycler
-import mx.itesm.aa.atencionatizapan.view.PrincipalFragDirections
 import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorLluvia
 import mx.itesm.aa.atencionatizapan.viewmodel.descargarHistoriales.ListaLluviaVM
 
-/** @author: Eduardo Joel Cortez Valente
- * Fragmento que representa la pantalla con el historial de lluvia
+/** @author: Jose Luis Madrigal, Eduardo Joel Cortez, Maximiliano Benitez, Jorge Isidro Blanco,
+ * Cesar Emiliano Palome, Christian Parrish Gutierrez
+ *  Fragmento que representa el historial de lluvias
  */
-
 class LluviaFrag : Fragment(), ListenerRecycler {
 
     private lateinit var binding: FragmentLluviaBinding
@@ -31,6 +30,11 @@ class LluviaFrag : Fragment(), ListenerRecycler {
 
     private lateinit var adaptador: AdaptadorLluvia
 
+    /**
+     * Crea los componentes graficos
+     * @param inflater, contenedor, instancia del estado
+     * @return vista con los componentes
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -42,8 +46,11 @@ class LluviaFrag : Fragment(), ListenerRecycler {
 
     }
 
-
-    //Los componentes graficos YA EXISTEN
+    /**
+     * Modifica recyclerview y corre animacion de fondo al tener componentes creados
+     * @param vista, instancia de estado
+     * @return ninguno
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         configurarRV()
@@ -54,12 +61,22 @@ class LluviaFrag : Fragment(), ListenerRecycler {
         animationDrawable.start()
     }
 
+    /**
+     * Descarga datos y verifica observables al iniciar aplicacion
+     * @param ninguno
+     * @return ninguno
+     */
     override fun onStart() {
         super.onStart()
         lluviaVM.descargarDatosLluvia()
         configurarObservables()
     }
 
+    /**
+     * Configura los observables de los eventos de lluvias
+     * @param ninguno
+     * @return ninguno
+     */
     private fun configurarObservables() {
         lluviaVM.listaLluvia.observe(viewLifecycleOwner){lista ->
             val arrEventos = lista.toTypedArray()
@@ -68,6 +85,11 @@ class LluviaFrag : Fragment(), ListenerRecycler {
         }
     }
 
+    /**
+     * Actualiza recyclerview con los eventos de lluvias observados
+     * @param ninguno
+     * @return ninguno
+     */
     private fun configurarRV() {
         val arrEventos = arrayOf(LluviaData(1, 3.11, 4.1, 2.1, 2.1, "17/02/2022", "02:32:02"))
         val layout = LinearLayoutManager(requireContext())
@@ -81,6 +103,11 @@ class LluviaFrag : Fragment(), ListenerRecycler {
         binding.rvEventos.addItemDecoration(separador)
     }
 
+    /**
+     * Cambia a pantalla de informacion usando los datos del renglon presionado
+     * @param posicion del renglon
+     * @return ninguno
+     */
     override fun itemClicked(position: Int) {
         val lluvia = adaptador.arrEventos[position]
         val accion = LluviaFragDirections.actionLluviaFragToInfoLluviaFragment(lluvia)

@@ -3,8 +3,9 @@ package mx.itesm.aa.atencionatizapan.model.clasesDataEventos
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
-/** @author: Jose Luis Madrigal
- * Data class que establece los datos de la clase Incendio
+/** @author: Jose Luis Madrigal, Eduardo Joel Cortez, Maximiliano Benitez, Jorge Isidro Blanco,
+ * Cesar Emiliano Palome, Christian Parrish Gutierrez
+ * Clase que establece los atributos del evento Incendio
  */
 data class IncendioData(
     @SerializedName("ID_incendio")

@@ -11,10 +11,10 @@ import androidx.navigation.fragment.navArgs
 import mx.itesm.aa.atencionatizapan.viewmodel.info.InfoCalleViewModel
 import mx.itesm.aa.atencionatizapan.databinding.FragmentInfoCalleBinding
 
-/** @author: Eduardo Joel Cortez Valente
- * Fragmento que muestra la información detallada de un evento de tipo calle cerrada en especifico
+/** @author: Jose Luis Madrigal, Eduardo Joel Cortez, Maximiliano Benitez, Jorge Isidro Blanco,
+ * Cesar Emiliano Palome, Christian Parrish Gutierrez
+ *  Fragmento que muestra la informacion detalla de un evento de calle cerrada seleccionado
  */
-
 class InfoCalleFragment : Fragment() {
 
     private lateinit var binding: FragmentInfoCalleBinding
@@ -23,6 +23,11 @@ class InfoCalleFragment : Fragment() {
 
     private val args: InfoCalleFragmentArgs by navArgs()
 
+    /**
+     * Crea los componentes graficos
+     * @param inflater, contenedor, instancia de estado
+     * @return vista con los componentes
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,6 +36,11 @@ class InfoCalleFragment : Fragment() {
         return binding.root
     }
 
+    /**
+     * Verifica observables y corre animacion de fondo al tener componentes creados
+     * @param vista, instancia de estado
+     * @return ninguno
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         configurarObservables()
@@ -41,6 +51,11 @@ class InfoCalleFragment : Fragment() {
         animationDrawable.start()
     }
 
+    /**
+     * Revisa los atributos observables del evento seleccionado y los muestra en los componentes.
+     * @param ninguno
+     * @return ninguno
+     */
     private fun configurarObservables() {
         val calle = args.callecerrada.calle
         val cp = args.callecerrada.cp

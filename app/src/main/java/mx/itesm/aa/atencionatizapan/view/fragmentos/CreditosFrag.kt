@@ -13,6 +13,10 @@ import mx.itesm.aa.atencionatizapan.R
 import mx.itesm.aa.atencionatizapan.databinding.FragmentCreditosBinding
 import mx.itesm.aa.atencionatizapan.databinding.FragmentLluviaBinding
 
+/** @author: Jose Luis Madrigal, Eduardo Joel Cortez, Maximiliano Benitez, Jorge Isidro Blanco,
+ * Cesar Emiliano Palome, Christian Parrish Gutierrez
+ *  Fragmento que muestra los creditos.
+ */
 class creditosFrag : Fragment() {
 
     private lateinit var binding: FragmentCreditosBinding
@@ -23,6 +27,11 @@ class creditosFrag : Fragment() {
 
     private lateinit var viewModel: CreditosViewModel
 
+    /**
+     * Crea los componentes graficos
+     * @param inflater, contenedor, instancia de estado
+     * @return vista con los componentes
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,6 +41,11 @@ class creditosFrag : Fragment() {
 
     }
 
+    /**
+     * Actualiza datos y corre animacion de fondo al tener componentes creados
+     * @param instancia de estado
+     * @return ninguno
+     */
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(CreditosViewModel::class.java)

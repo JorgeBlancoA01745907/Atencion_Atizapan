@@ -1,4 +1,4 @@
-package mx.itesm.aa.atencionatizapan.view
+package mx.itesm.aa.atencionatizapan.view.fragmentos
 
 import android.graphics.drawable.AnimationDrawable
 import androidx.lifecycle.ViewModelProvider
@@ -14,10 +14,10 @@ import mx.itesm.aa.atencionatizapan.R
 import mx.itesm.aa.atencionatizapan.databinding.FragmentPrincipalBinding
 import mx.itesm.aa.atencionatizapan.viewmodel.PrincipalViewModel
 
-/** @author:
- *  Vista del fragmento Principal
+/** @author: Jose Luis Madrigal, Eduardo Joel Cortez, Maximiliano Benitez, Jorge Isidro Blanco,
+ * Cesar Emiliano Palome, Christian Parrish Gutierrez
+ *  Vista del fragmento principal
  */
-
 class PrincipalFrag : Fragment() {
 
     /* companion object {
@@ -28,6 +28,11 @@ class PrincipalFrag : Fragment() {
 
     private lateinit var binding: FragmentPrincipalBinding
 
+    /**
+     * Crea los componentes graficos
+     * @param inflater, contenedor, instancia de estado
+     * @return vista con los componentes
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -37,6 +42,11 @@ class PrincipalFrag : Fragment() {
         return binding.root
     }
 
+    /**
+     * Registra eventos y corre animacion de fondo al tener componentes creados
+     * @param vista, instancia de estado
+     * @return ninguno
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         registrarEventos()
@@ -47,6 +57,9 @@ class PrincipalFrag : Fragment() {
         animationDrawable.start()
     }
 
+    /**
+     * Navega a pantalla de historial especifico dependiendo de la seleccion del boton
+     */
     private fun registrarEventos() {
         binding.ibLluvia.setOnClickListener {
             val accion = R.id.action_principalFrag_to_lluviaFrag

@@ -4,7 +4,8 @@ import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.IncendioData
 import retrofit2.Call
 import retrofit2.http.GET
 
-/** @author: Eduardo Joel Cortez Valente
+/** @author: Jose Luis Madrigal, Eduardo Joel Cortez, Maximiliano Benitez, Jorge Isidro Blanco,
+ * Cesar Emiliano Palome, Christian Parrish Gutierrez
  * Interfaz que descarga los datos de los incendios
  */
 

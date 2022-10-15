@@ -14,10 +14,19 @@ import com.google.firebase.messaging.ktx.messaging
 import mx.itesm.aa.atencionatizapan.R
 import mx.itesm.aa.atencionatizapan.databinding.ActivityMenuBinding
 
+/** @author: Jose Luis Madrigal, Eduardo Joel Cortez, Maximiliano Benitez, Jorge Isidro Blanco,
+ * Cesar Emiliano Palome, Christian Parrish Gutierrez
+ *  Vista de la Actividad Menu (es la que corre al iniciar la aplicacion)
+ */
 class Menu : AppCompatActivity() {
 
     private lateinit var binding: ActivityMenuBinding
 
+    /**
+     * Crea los componentes graficos y establece pantallas en cada boton de la barra inferior
+     * @param instancia de estado
+     * @return ninguno
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -48,6 +57,11 @@ class Menu : AppCompatActivity() {
         supportActionBar?.hide()
     }
 
+    /**
+     * Genera navegacion adecuada por el menu
+     * @param ninguno
+     * @return booleano que verifica funcionamiento
+     */
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_activity_menu)
         val appBarConfiguration = AppBarConfiguration(navController.graph)

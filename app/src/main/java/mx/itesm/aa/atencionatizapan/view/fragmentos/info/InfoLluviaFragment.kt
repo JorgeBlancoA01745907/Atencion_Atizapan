@@ -11,10 +11,10 @@ import androidx.navigation.fragment.navArgs
 import mx.itesm.aa.atencionatizapan.viewmodel.info.InfoLluviaViewModel
 import mx.itesm.aa.atencionatizapan.databinding.FragmentInfoLluviaBinding
 
-/** @author: Eduardo Joel Cortez Valente
- * Fragmento que muestra la información detallada de un evento de tipo lluvia en especifico
+/** @author: Jose Luis Madrigal, Eduardo Joel Cortez, Maximiliano Benitez, Jorge Isidro Blanco,
+ * Cesar Emiliano Palome, Christian Parrish Gutierrez
+ *  Fragmento que muestra la informacion detalla de un evento de lluvia seleccionado
  */
-
 class InfoLluviaFragment : Fragment() {
 
     private lateinit var binding: FragmentInfoLluviaBinding
@@ -23,6 +23,11 @@ class InfoLluviaFragment : Fragment() {
 
     private val args: InfoLluviaFragmentArgs by navArgs()
 
+    /**
+     * Crea los componentes graficos
+     * @param inflater, contenedor, instancia de estado
+     * @return vista con los componentes
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,6 +37,11 @@ class InfoLluviaFragment : Fragment() {
 
     }
 
+    /**
+     * Verifica observables y corre animacion de fondo al tener componentes creados
+     * @param vista, instancia de estado
+     * @return ninguno
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         configurarObservables()
@@ -42,6 +52,11 @@ class InfoLluviaFragment : Fragment() {
         animationDrawable.start()
     }
 
+    /**
+     * Revisa los atributos observables del evento seleccionado y los muestra en los componentes.
+     * @param ninguno
+     * @return ninguno
+     */
     private fun configurarObservables() {
         val humedad = args.lluvia.humedad
         val volumen = args.lluvia.volumen

@@ -9,8 +9,10 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-/** @author:
- *  ViewModel de lluvia
+
+/** @author: Jose Luis Madrigal, Eduardo Joel Cortez, Maximiliano Benitez, Jorge Isidro Blanco,
+ * Cesar Emiliano Palome, Christian Parrish Gutierrez
+ *  ViewModel para el historial de lluvias
  */
 class ListaLluviaVM : ViewModel() {
     private val retrofit by lazy {  // El objeto retrofit para instanciar el objeto que se conecta a la red y accede a los servicios definidos
@@ -28,7 +30,11 @@ class ListaLluviaVM : ViewModel() {
     //Observables
     val listaLluvia = MutableLiveData<List<LluviaData>>()
 
-    //Interfaz
+    /**
+     * Utiliza la interfaz para descargar la lista de eventos de lluvias
+     * @param ninguno
+     * @return ninguno
+     */
     fun descargarDatosLluvia() {
         val call = servicioLluviaAPI.descargarDatosLluvia()
         call.enqueue(object: Callback<List<LluviaData>> {

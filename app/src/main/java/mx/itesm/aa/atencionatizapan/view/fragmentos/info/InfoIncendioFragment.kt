@@ -12,10 +12,10 @@ import mx.itesm.aa.atencionatizapan.databinding.FragmentInfoIncendioBinding
 import mx.itesm.aa.atencionatizapan.viewmodel.info.InfoIncendioViewModel
 import mx.itesm.aa.atencionatizapan.databinding.FragmentInfoInundacionBinding
 
-/** @author: Eduardo Joel Cortez Valente
- * Fragmento que muestra la información detallada de un evento de tipo inundación en especifico
+/** @author: Jose Luis Madrigal, Eduardo Joel Cortez, Maximiliano Benitez, Jorge Isidro Blanco,
+ * Cesar Emiliano Palome, Christian Parrish Gutierrez
+ *  Fragmento que muestra la informacion detalla de un evento de incendio seleccionado
  */
-
 class InfoIncendioFragment : Fragment() {
 
     private lateinit var binding: FragmentInfoIncendioBinding
@@ -24,6 +24,11 @@ class InfoIncendioFragment : Fragment() {
 
     private val args: InfoIncendioFragmentArgs by navArgs()
 
+    /**
+     * Crea los componentes graficos
+     * @param inflater, contenedor, instancia de estado
+     * @return vista con los componentes
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,6 +37,11 @@ class InfoIncendioFragment : Fragment() {
         return binding.root
     }
 
+    /**
+     * Verifica observables y corre animacion de fondo al tener componentes creados
+     * @param vista, instancia de estado
+     * @return ninguno
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         configurarObservables()
@@ -43,6 +53,11 @@ class InfoIncendioFragment : Fragment() {
 
     }
 
+    /**
+     * Revisa los atributos observables del evento seleccionado y los muestra en los componentes.
+     * @param ninguno
+     * @return ninguno
+     */
     private fun configurarObservables() {
         val calle = args.incendio.calle
         val cp = args.incendio.cp

@@ -10,10 +10,10 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-/** @author:
- *  ViewModel de Inundación
+/** @author: Jose Luis Madrigal, Eduardo Joel Cortez, Maximiliano Benitez, Jorge Isidro Blanco,
+ * Cesar Emiliano Palome, Christian Parrish Gutierrez
+ *  ViewModel para el historial de inundaciones
  */
-
 class ListaInundacionVM : ViewModel() {
     private val retrofit by lazy {  // El objeto retrofit para instanciar el objeto que se conecta a la red y accede a los servicios definidos
         Retrofit.Builder()
@@ -30,7 +30,11 @@ class ListaInundacionVM : ViewModel() {
     //Observables
     val listaInundacion = MutableLiveData<List<InundacionData>>()
 
-    //Interfaz
+    /**
+     * Utiliza la interfaz para descargar la lista de eventos de incendios
+     * @param ninguno
+     * @return ninguno
+     */
     fun descargarDatosInundacion() {
         val call = servicioInundacionAPI.descargarDatosInundacion()
         call.enqueue(object: Callback<List<InundacionData>> {

@@ -10,17 +10,20 @@ import mx.itesm.aa.atencionatizapan.R
 import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.CalleCerradaData
 import mx.itesm.aa.atencionatizapan.model.interfaces.ListenerRecycler
 
-/** @author:
- *  Vista del adaptador de calle cerrada
+/** @author: Jose Luis Madrigal, Eduardo Joel Cortez, Maximiliano Benitez, Jorge Isidro Blanco,
+ * Cesar Emiliano Palome, Christian Parrish Gutierrez
+ *  Adaptador que recibe los datos de calles cerradas y genera un renglon por cada evento.
  */
-
 class AdaptadorCalleCerrada (val context: Context,
                              var arrEventos: Array<CalleCerradaData>,
                              var listener: ListenerRecycler? = null):
     RecyclerView.Adapter<AdaptadorCalleCerrada.RenglonEvento>() {
 
-
-    // Una vista para un renglon
+    /**
+     * Obtiene la vista para un renglon
+     * @param padre, tipo de vista
+     * @return vista de renglon
+     */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RenglonEvento {
         val vista = LayoutInflater.from(context).inflate(
             R.layout.renglon_evento,
@@ -28,7 +31,11 @@ class AdaptadorCalleCerrada (val context: Context,
         return RenglonEvento(vista)
     }
 
-    // Poblar la vista (renglon) con los datos del indice 'position'
+    /**
+     * Pobla la vista de un renglon con los datos del indice de la posicion
+     * @param renglon del evento, posicion
+     * @return ninguno
+     */
     override fun onBindViewHolder(holder: RenglonEvento, position: Int) {
         val evento = arrEventos[position]
         holder.set(evento)
@@ -38,14 +45,27 @@ class AdaptadorCalleCerrada (val context: Context,
         }
     }
 
-    // El numero de renglones que tendra el recyclerview
+    /**
+     * Determina el numero de renglones que tendra el recyclerview
+     * @param ninguno
+     * @return tamaño del arreglo (num renglones)
+     */
     override fun getItemCount(): Int {
         return arrEventos.size
     }
 
-    // Establece los datos a mostrar en su respectivo texto
+    /**
+     * Establece la colocacion de los renglones con sus datos en el recyclerview
+     * @param vista de un renglon
+     * @return renglon en recyclerview
+     */
     class RenglonEvento(var renglonEvento: View) : RecyclerView.ViewHolder(renglonEvento)
     {
+        /**
+         * Establece los datos a mostrar en los atributos del renglon.
+         * @param un evento de calle cerrada
+         * @return ninguno
+         */
         fun set(evento: CalleCerradaData) {
             val tituloEvento = renglonEvento.findViewById<TextView>(R.id.tituloEvento)
             val fechaEvento = renglonEvento.findViewById<TextView>(R.id.fechaEvento)

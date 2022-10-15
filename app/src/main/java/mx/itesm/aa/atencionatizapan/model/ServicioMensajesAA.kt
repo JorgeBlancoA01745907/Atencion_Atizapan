@@ -13,8 +13,9 @@ import com.google.firebase.messaging.RemoteMessage
 import mx.itesm.aa.atencionatizapan.R
 import mx.itesm.aa.atencionatizapan.view.MainActivity
 
-/** @author:
- *  Vista del fragmento de servicio de mensajes
+/** @author: Jose Luis Madrigal, Eduardo Joel Cortez, Maximiliano Benitez, Jorge Isidro Blanco,
+ * Cesar Emiliano Palome, Christian Parrish Gutierrez
+ *  Fragmento que accede al servicio de notificaciones con tokens.
  */
 class ServicioMensajesAA : FirebaseMessagingService()
 {

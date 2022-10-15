@@ -17,11 +17,10 @@ import mx.itesm.aa.atencionatizapan.model.interfaces.ListenerRecycler
 import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorCalleCerrada
 import mx.itesm.aa.atencionatizapan.viewmodel.descargarHistoriales.ListaCalleCerradaVM
 
-/** @author: Eduardo Joel Cortez Valente
- * Fragmento que representa la pantalla con el historial de calle cerrada
+/** @author: Jose Luis Madrigal, Eduardo Joel Cortez, Maximiliano Benitez, Jorge Isidro Blanco,
+ * Cesar Emiliano Palome, Christian Parrish Gutierrez
+ *  Fragmento que representa el historial de calles cerradas
  */
-
-
 class CalleCerradaFrag : Fragment(), ListenerRecycler {
 
     private lateinit var binding: FragmentCalleCerradaBinding
@@ -30,6 +29,11 @@ class CalleCerradaFrag : Fragment(), ListenerRecycler {
 
     private lateinit var adaptador: AdaptadorCalleCerrada
 
+    /**
+     * Crea los componentes graficos
+     * @param inflater, contenedor, instancia del estado
+     * @return vista con los componentes
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,8 +43,11 @@ class CalleCerradaFrag : Fragment(), ListenerRecycler {
         return binding.root
     }
 
-
-    //Los componentes graficos YA EXISTEN
+    /**
+     * Modifica recyclerview y corre animacion de fondo al tener componentes creados
+     * @param vista, instancia de estado
+     * @return ninguno
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         configurarRV()
@@ -51,12 +58,22 @@ class CalleCerradaFrag : Fragment(), ListenerRecycler {
         animationDrawable.start()
     }
 
+    /**
+     * Descarga datos y verifica observables al iniciar aplicacion
+     * @param ninguno
+     * @return ninguno
+     */
     override fun onStart() {
         super.onStart()
         calleCerradaVM.descargarDatosCalleCerrada()
         configurarObservables()
     }
 
+    /**
+     * Configura los observables de los eventos de calles cerradas
+     * @param ninguno
+     * @return ninguno
+     */
     private fun configurarObservables() {
         calleCerradaVM.listaCalleC.observe(viewLifecycleOwner){lista ->
             val arrEventos = lista.toTypedArray()
@@ -65,6 +82,11 @@ class CalleCerradaFrag : Fragment(), ListenerRecycler {
         }
     }
 
+    /**
+     * Actualiza recyclerview con los eventos de calles cerradas observados
+     * @param ninguno
+     * @return ninguno
+     */
     private fun configurarRV() {
         val arrEventos = arrayOf(CalleCerradaData(5, "Prado", "152674", "Echegaray", 1.5, "15/03/2022", "15:02:25"))
         val layout = LinearLayoutManager(requireContext())
@@ -78,6 +100,11 @@ class CalleCerradaFrag : Fragment(), ListenerRecycler {
         binding.rvEventos.addItemDecoration(separador)
     }
 
+    /**
+     * Cambia a pantalla de informacion usando los datos del renglon presionado
+     * @param posicion del renglon
+     * @return ninguno
+     */
     override fun itemClicked(position: Int) {
         val callecerrada = adaptador.arrEventos[position]
         val accion = CalleCerradaFragDirections.actionCalleCerradaFragToInfoCalleFragment(callecerrada)

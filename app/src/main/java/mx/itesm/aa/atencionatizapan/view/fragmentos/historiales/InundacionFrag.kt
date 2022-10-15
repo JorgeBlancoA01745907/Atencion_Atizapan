@@ -16,10 +16,11 @@ import mx.itesm.aa.atencionatizapan.model.clasesDataEventos.InundacionData
 import mx.itesm.aa.atencionatizapan.model.interfaces.ListenerRecycler
 import mx.itesm.aa.atencionatizapan.view.adaptadores.AdaptadorInundacion
 import mx.itesm.aa.atencionatizapan.viewmodel.descargarHistoriales.ListaInundacionVM
-/** @author: Eduardo Joel Cortez Valente
- * Fragmento que representa la pantalla con el historial de inundación
- */
 
+/** @author: Jose Luis Madrigal, Eduardo Joel Cortez, Maximiliano Benitez, Jorge Isidro Blanco,
+ * Cesar Emiliano Palome, Christian Parrish Gutierrez
+ *  Fragmento que representa el historial de inundaciones
+ */
 class InundacionFrag : Fragment(), ListenerRecycler {
 
     private lateinit var binding: FragmentInundacionBinding
@@ -28,6 +29,11 @@ class InundacionFrag : Fragment(), ListenerRecycler {
 
     private lateinit var adaptador: AdaptadorInundacion
 
+    /**
+     * Crea los componentes graficos
+     * @param inflater, contenedor, instancia del estado
+     * @return vista con los componentes
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -37,8 +43,11 @@ class InundacionFrag : Fragment(), ListenerRecycler {
         return binding.root
     }
 
-
-    //Los componentes graficos YA EXISTEN
+    /**
+     * Modifica recyclerview y corre animacion de fondo al tener componentes creados
+     * @param vista, instancia de estado
+     * @return ninguno
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         configurarRV()
@@ -49,12 +58,22 @@ class InundacionFrag : Fragment(), ListenerRecycler {
         animationDrawable.start()
     }
 
+    /**
+     * Descarga datos y verifica observables al iniciar aplicacion
+     * @param ninguno
+     * @return ninguno
+     */
     override fun onStart() {
         super.onStart()
         inundacionVM.descargarDatosInundacion()
         configurarObservables()
     }
 
+    /**
+     * Configura los observables de los eventos de inundaciones
+     * @param ninguno
+     * @return ninguno
+     */
     private fun configurarObservables() {
         inundacionVM.listaInundacion.observe(viewLifecycleOwner){lista ->
             val arrEventos = lista.toTypedArray()
@@ -63,6 +82,11 @@ class InundacionFrag : Fragment(), ListenerRecycler {
         }
     }
 
+    /**
+     * Actualiza recyclerview con los eventos de inundaciones observados
+     * @param ninguno
+     * @return ninguno
+     */
     private fun configurarRV() {
         val arrEventos = arrayOf(InundacionData(8, "Alborada", "153678", "Esmeralda", "15/08/2022", "14:25:06"))
         val layout = LinearLayoutManager(requireContext())
@@ -76,6 +100,11 @@ class InundacionFrag : Fragment(), ListenerRecycler {
         binding.rvEventos.addItemDecoration(separador)
     }
 
+    /**
+     * Cambia a pantalla de informacion usando los datos del renglon presionado
+     * @param posicion del renglon
+     * @return ninguno
+     */
     override fun itemClicked(position: Int) {
         val inundacion = adaptador.arrEventos[position]
         val accion = InundacionFragDirections.actionInundacionFragToInfoInundacionFragment(inundacion)

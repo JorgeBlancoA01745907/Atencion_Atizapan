@@ -8,8 +8,9 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.messaging.ktx.messaging
 import mx.itesm.aa.atencionatizapan.R
 
-/** @author:
- *  Vista de la Actividad Principal
+/** @author: Jose Luis Madrigal, Eduardo Joel Cortez, Maximiliano Benitez, Jorge Isidro Blanco,
+ * Cesar Emiliano Palome, Christian Parrish Gutierrez
+ *  Vista de la Actividad Principal (no es la que corre al iniciar la aplicacion)
  */
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
