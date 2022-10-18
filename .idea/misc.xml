@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.195" />
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/drawable/borde_calle.xml" value="0.2265" />
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/drawable/borde_incendio.xml" value="0.2265" />
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/drawable/borde_inundacion.xml" value="0.2265" />
@@ -28,6 +29,7 @@
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/historial.xml" value="0.253125" />
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/layout/renglon_evento.xml" value="0.25" />
         <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/CODES/AndroidStudio/Atencion_Atizapan/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.194" />
         <entry key="..\:/Users/eduar/Documents/TecCienciasComputacionales/QuintoSemestre/Atencion_Atizapan/app/src/main/res/layout/fragment_info_calle.xml" value="0.2463768115942029" />
         <entry key="..\:/Users/eduar/Documents/TecCienciasComputacionales/QuintoSemestre/Atencion_Atizapan/app/src/main/res/layout/fragment_info_incendio.xml" value="0.2463768115942029" />
         <entry key="..\:/Users/eduar/Documents/TecCienciasComputacionales/QuintoSemestre/Atencion_Atizapan/app/src/main/res/layout/fragment_info_inundacion.xml" value="0.2463768115942029" />
