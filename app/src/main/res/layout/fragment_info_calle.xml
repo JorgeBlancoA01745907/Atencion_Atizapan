@@ -5,56 +5,51 @@
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_list"
+    android:background="@drawable/gradient_list_2"
     tools:context=".view.fragmentos.info.InfoCalleFragment">
 
     <ImageView
-        android:id="@+id/imagenFondoInfoCalle"
-        android:alpha="0.7"
+        android:id="@+id/imageNFondoInfoCalle"
         android:layout_width="481dp"
         android:layout_height="871dp"
+        android:alpha="0.7"
         android:src="@drawable/fondo_solo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/iconoInfoCalle"
-        android:layout_width="182dp"
-        android:layout_height="152dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/calle_info"
+    <TextView
+        android:id="@+id/CalleCerrada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="370dp"
+        android:fontFamily="@font/ciutadella_rounded"
+        android:text="Calle Cerrada"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="331dp"
-        android:layout_height="412dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/marcocalle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconoInfoCalle" />
-
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
+        android:layout_width="283dp"
+        android:layout_height="396dp"
+        android:layout_marginStart="32dp"
 
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="130dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/borde_calle"
+
+        android:alpha="0.9"
+        android:background="@drawable/gradient_list_2"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconoInfoCalle">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/LineatLayoutStatic"
@@ -66,73 +61,73 @@
                 android:id="@+id/infoHumedad"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_calle"
-                android:fontFamily="serif"
+
+                android:fontFamily="@font/ciutadella_rounded"
                 android:text=" Calle: "
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/infoVolumen"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_calle"
-                android:fontFamily="serif"
+
+                android:fontFamily="@font/ciutadella_rounded"
                 android:text=" CP: "
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/infoViento"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_calle"
-                android:fontFamily="serif"
+
+                android:fontFamily="@font/ciutadella_rounded"
                 android:text=" Colonia: "
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/infoTiempo"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_calle"
-                android:fontFamily="serif"
-                android:text=" Tiempo cerrada:  "
-                android:textAlignment="textStart"
+
+                android:fontFamily="@font/ciutadella_rounded"
+                android:text=" Duración:"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/infoFecha"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_calle"
-                android:fontFamily="serif"
+
+                android:fontFamily="@font/ciutadella_rounded"
                 android:text=" Fecha: "
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/infoHora"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_calle"
-                android:fontFamily="serif"
+
+                android:fontFamily="@font/ciutadella_rounded"
                 android:text=" Hora: "
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -145,9 +140,10 @@
                 android:id="@+id/infoCalleCalle"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_calle"
+
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textColor="#FDFDFD"
                 android:textSize="20sp" />
 
@@ -155,9 +151,10 @@
                 android:id="@+id/infoCPCalle"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_calle"
+
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textColor="#FDFDFD"
                 android:textSize="20sp" />
 
@@ -165,9 +162,10 @@
                 android:id="@+id/infoColoniaCalle"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_calle"
+
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textColor="#FDFDFD"
                 android:textSize="20sp" />
 
@@ -175,9 +173,10 @@
                 android:id="@+id/infoTiempoCalle"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_calle"
+
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textColor="#FDFDFD"
                 android:textSize="20sp" />
 
@@ -185,9 +184,10 @@
                 android:id="@+id/infoFechaCalle"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_calle"
+
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textColor="#FDFDFD"
                 android:textSize="20sp" />
 
@@ -195,13 +195,26 @@
                 android:id="@+id/infoHoraCalle"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_calle"
+
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textColor="#FDFDFD"
                 android:textSize="20sp" />
         </LinearLayout>
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="133dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="510dp"
+        android:src="@drawable/calle_cerrada"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

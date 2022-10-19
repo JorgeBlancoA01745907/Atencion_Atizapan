@@ -5,7 +5,7 @@
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_list"
+    android:background="@drawable/gradient_list_5"
     tools:context=".view.fragmentos.info.InfoInundacionFragment">
 
     <ImageView
@@ -21,39 +21,44 @@
 
     <ImageView
         android:id="@+id/iconoInfoInundacion"
-        android:layout_width="208dp"
-        android:layout_height="182dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="177dp"
+        android:layout_height="133dp"
+        android:layout_marginBottom="470dp"
         android:src="@drawable/inundacion_info"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="315dp"
-        android:layout_height="411dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/marcoinundacion"
+    <TextView
+        android:id="@+id/calleCerrada3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="310dp"
+        android:fontFamily="@font/ciutadella_rounded"
+        android:text="Inundación"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconoInfoInundacion" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="34dp"
+        android:background="@drawable/gradient_list_5"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="130dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/borde_inundacion"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconoInfoInundacion">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/LinearLayoutStatic"
@@ -65,10 +70,9 @@
                 android:id="@+id/infoHumedad"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_inundacion"
                 android:fontFamily="serif"
                 android:text=" Calle: "
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -77,10 +81,9 @@
                 android:id="@+id/infoVolumen"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_inundacion"
                 android:fontFamily="serif"
                 android:text=" CP: "
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -89,10 +92,9 @@
                 android:id="@+id/infoViento"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_inundacion"
                 android:fontFamily="serif"
                 android:text=" Colonia:  "
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -101,10 +103,9 @@
                 android:id="@+id/infoFecha"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_inundacion"
                 android:fontFamily="serif"
                 android:text=" Fecha: "
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -113,10 +114,9 @@
                 android:id="@+id/infoHora"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_inundacion"
                 android:fontFamily="serif"
                 android:text=" Hora: "
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -132,9 +132,9 @@
                 android:id="@+id/infoCalleInundacion"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_inundacion"
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -142,9 +142,9 @@
                 android:id="@+id/infoCPInundacion"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_inundacion"
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -152,9 +152,9 @@
                 android:id="@+id/infoColoniaInundacion"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_inundacion"
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -162,9 +162,9 @@
                 android:id="@+id/infoFechaInundacion"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_inundacion"
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -172,9 +172,9 @@
                 android:id="@+id/infoHoraInundacion"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_inundacion"
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
         </LinearLayout>

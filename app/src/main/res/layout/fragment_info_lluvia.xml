@@ -5,7 +5,7 @@
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_list"
+    android:background="@drawable/gradient_list_4"
     tools:context=".view.fragmentos.info.InfoLluviaFragment">
 
     <ImageView
@@ -21,38 +21,47 @@
 
     <ImageView
         android:id="@+id/iconoInfoLluvia"
-        android:layout_width="182dp"
-        android:layout_height="152dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="145dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="530dp"
         android:src="@drawable/lluvia_info"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="314dp"
-        android:layout_height="410dp"
-        android:layout_marginStart="48dp"
-        android:src="@drawable/marcolluvia"
+    <TextView
+        android:id="@+id/calleCerrada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="360dp"
+        android:fontFamily="@font/ciutadella_rounded"
+        android:text="Lluvia"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconoInfoLluvia" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/gradient_list_4"
+
         android:layout_marginEnd="32dp"
-        android:background="@drawable/borde_lluvia"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconoInfoLluvia">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/LinearLayoutStatic"
@@ -64,10 +73,9 @@
                 android:id="@+id/infoHumedad"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_lluvia"
                 android:fontFamily="serif"
                 android:text=" Humedad: "
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -76,10 +84,9 @@
                 android:id="@+id/infoVolumen"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_lluvia"
                 android:fontFamily="serif"
                 android:text=" Volumen de agua:  "
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -88,10 +95,9 @@
                 android:id="@+id/infoViento"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_lluvia"
                 android:fontFamily="serif"
                 android:text=" Viento: "
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -100,10 +106,9 @@
                 android:id="@+id/infoTemperatura"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_lluvia"
                 android:fontFamily="serif"
                 android:text=" Temperatura: "
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -112,10 +117,9 @@
                 android:id="@+id/infoFecha"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_lluvia"
                 android:fontFamily="serif"
                 android:text=" Fecha: "
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -124,10 +128,9 @@
                 android:id="@+id/infoHora"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_lluvia"
                 android:fontFamily="serif"
                 android:text=" Hora: "
-                android:textAlignment="textStart"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -143,9 +146,9 @@
                 android:id="@+id/infoHumedadLluvia"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_lluvia"
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -154,9 +157,9 @@
                 android:id="@+id/infoVolumenLluvia"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_lluvia"
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -165,9 +168,9 @@
                 android:id="@+id/infoVientoLluvia"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_lluvia"
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -176,9 +179,9 @@
                 android:id="@+id/infoTemperaturaLluvia"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_lluvia"
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -187,9 +190,9 @@
                 android:id="@+id/infoFechaLluvia"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_lluvia"
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -198,9 +201,9 @@
                 android:id="@+id/infoHoraLluvia"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/borde_lluvia"
                 android:fontFamily="serif"
                 android:text="TextView"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />

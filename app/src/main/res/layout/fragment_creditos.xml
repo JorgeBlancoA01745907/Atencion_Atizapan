@@ -157,7 +157,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="monospace"
-                android:text="Parrish Arrieta Gutiérrez A01751584"
+                android:text="Parrish Gutiérrez Arrieta A01751584"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 android:textStyle="bold" />

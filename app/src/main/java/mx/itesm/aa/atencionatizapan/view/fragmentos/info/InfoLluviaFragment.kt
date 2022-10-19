@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.fragment.navArgs
 import mx.itesm.aa.atencionatizapan.viewmodel.info.InfoLluviaViewModel
@@ -46,10 +47,15 @@ class InfoLluviaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         configurarObservables()
         val constraintLayout: ConstraintLayout = binding.mainLayout
+        val constraintLayout2: LinearLayout = binding.linearLayout2
         val animationDrawable: AnimationDrawable = constraintLayout.background as AnimationDrawable
+        val animationDrawable2: AnimationDrawable = constraintLayout2.background as AnimationDrawable
         animationDrawable.setEnterFadeDuration(2500)
         animationDrawable.setExitFadeDuration(5000)
         animationDrawable.start()
+        animationDrawable2.setEnterFadeDuration(2500)
+        animationDrawable2.setExitFadeDuration(5000)
+        animationDrawable2.start()
     }
 
     /**

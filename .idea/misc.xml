@@ -60,21 +60,33 @@
         <entry key="app/src/main/res/drawable/background_1.xml" value="0.2545" />
         <entry key="app/src/main/res/drawable/background_2.xml" value="0.2545" />
         <entry key="app/src/main/res/drawable/background_3.xml" value="0.2545" />
+        <entry key="app/src/main/res/drawable/background_4.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/background_5.xml" value="0.213" />
+        <entry key="app/src/main/res/drawable/background_6.xml" value="0.213" />
+        <entry key="app/src/main/res/drawable/background_7.xml" value="0.213" />
+        <entry key="app/src/main/res/drawable/background_8.xml" value="0.213" />
+        <entry key="app/src/main/res/drawable/background_9.xml" value="0.213" />
+        <entry key="app/src/main/res/drawable/borde_calle.xml" value="0.154" />
         <entry key="app/src/main/res/drawable/gradient_list.xml" value="0.2545" />
+        <entry key="app/src/main/res/drawable/gradient_list_2.xml" value="0.1315" />
+        <entry key="app/src/main/res/drawable/gradient_list_3.xml" value="0.213" />
+        <entry key="app/src/main/res/drawable/gradient_list_4.xml" value="0.213" />
+        <entry key="app/src/main/res/drawable/gradient_list_5.xml" value="0.213" />
         <entry key="app/src/main/res/drawable/layout.xml" value="0.16" />
         <entry key="app/src/main/res/layout/activity_menu.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_calle_cerrada.xml" value="0.1743659420289855" />
         <entry key="app/src/main/res/layout/fragment_contactos.xml" value="0.24953460693359375" />
         <entry key="app/src/main/res/layout/fragment_creditos.xml" value="0.32189331054687503" />
         <entry key="app/src/main/res/layout/fragment_incendio.xml" value="0.2187347412109375" />
-        <entry key="app/src/main/res/layout/fragment_info_calle.xml" value="0.2979583740234375" />
-        <entry key="app/src/main/res/layout/fragment_info_incendio.xml" value="0.25611419677734376" />
-        <entry key="app/src/main/res/layout/fragment_info_inundacion.xml" value="0.41589207303696785" />
+        <entry key="app/src/main/res/layout/fragment_info_calle.xml" value="0.24316939890710382" />
+        <entry key="app/src/main/res/layout/fragment_info_incendio.xml" value="0.30233917236328134" />
+        <entry key="app/src/main/res/layout/fragment_info_inundacion.xml" value="0.2890960693359375" />
         <entry key="app/src/main/res/layout/fragment_info_lluvia.xml" value="0.2835820895522388" />
         <entry key="app/src/main/res/layout/fragment_inundacion.xml" value="0.1743659420289855" />
         <entry key="app/src/main/res/layout/fragment_lluvia.xml" value="0.4212753295898438" />
         <entry key="app/src/main/res/layout/fragment_principal.xml" value="0.2826666666666667" />
         <entry key="app/src/main/res/layout/renglon_evento.xml" value="0.19379734647446778" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1425" />
       </map>
     </option>
