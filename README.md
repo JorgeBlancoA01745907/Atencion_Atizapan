@@ -1,7 +1,5 @@
 # Atencion_Atizapan
-Aplicación Atención Atizapán
-
-El branch menu es el que contiene las funcionalidades completas.
+Aplicación Atención Atizapán (branch menu es el que contiene las funcionalidades completas)
 
 Eduardo Joel Cortez Valente A01746664
 
