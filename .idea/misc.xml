@@ -72,9 +72,9 @@
         <entry key="app/src/main/res/layout/fragment_info_inundacion.xml" value="0.41589207303696785" />
         <entry key="app/src/main/res/layout/fragment_info_lluvia.xml" value="0.2835820895522388" />
         <entry key="app/src/main/res/layout/fragment_inundacion.xml" value="0.1743659420289855" />
-        <entry key="app/src/main/res/layout/fragment_lluvia.xml" value="0.25186767578125" />
+        <entry key="app/src/main/res/layout/fragment_lluvia.xml" value="0.4212753295898438" />
         <entry key="app/src/main/res/layout/fragment_principal.xml" value="0.2826666666666667" />
-        <entry key="app/src/main/res/layout/renglon_evento.xml" value="0.23550724637681159" />
+        <entry key="app/src/main/res/layout/renglon_evento.xml" value="0.19379734647446778" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1425" />
       </map>
     </option>
