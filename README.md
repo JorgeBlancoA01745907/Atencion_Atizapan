@@ -1,5 +1,9 @@
 # Atencion_Atizapan
-Aplicación Atención Atizapán (branch menu es el que contiene las funcionalidades completas)
+
+## Aplicación Android Atención Atizapán (branch menu es el que contiene las funcionalidades completas)
+Esta aplicación tiene como objetivo informar a residentes o personas que suelen circular en el municipio de Atizapán acerca de eventos importantes como lluvia, inundación, calles cerradas o incendio, para que de esta manera puedan tomar las acciones pertinentes.
+
+## Autores
 
 Eduardo Joel Cortez Valente A01746664
 
