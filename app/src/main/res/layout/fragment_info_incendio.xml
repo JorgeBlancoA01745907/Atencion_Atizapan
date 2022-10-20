@@ -194,5 +194,18 @@
 
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="413dp"
+        android:layout_height="548dp"
+        android:layout_marginTop="140dp"
+        android:layout_weight="1"
+        android:alpha="0.4"
+        android:src="@drawable/lineas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

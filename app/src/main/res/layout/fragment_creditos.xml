@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/ciutadella_rounded"
         android:text="Acerca de"
@@ -57,7 +57,7 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/ciutadella_rounded"
         android:text="Autores"
         android:textColor="#E46A38"
@@ -86,67 +86,67 @@
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="32dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="monospace"
-                android:text="Eduardo Joel Cortez Valente A01746664"
+                android:text="Eduardo Joel Cortez Valente | A01746664@tec.mx"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="315dp"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="monospace"
-                android:text="José Luis Madrigal Sánchez A01745419"
+                android:text="José Luis Madrigal Sánchez  | A01745419@tec.mx"
                 android:textColor="#FFFFFF"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="328dp"
-                android:layout_height="wrap_content"
+                android:layout_width="367dp"
+                android:layout_height="30dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="monospace"
-                android:text="Maximiliano Benítez Ahumada A01752791"
+                android:text="Maximiliano Benítez Ahumada | Max.Benitez@tec.mx"
                 android:textColor="#FFFFFF"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="322dp"
-                android:layout_height="wrap_content"
+                android:layout_width="366dp"
+                android:layout_height="30dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="monospace"
-                android:text="César Emiliano Palome Luna A01746493"
+                android:text="César Emiliano Palome Luna | A01746493@tec.mx"
                 android:textColor="#FFFFFF"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView7"
-                android:layout_width="337dp"
-                android:layout_height="wrap_content"
+                android:layout_width="361dp"
+                android:layout_height="30dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="monospace"
-                android:text="Jorge Isidro Blanco Martínez A01745907"
+                android:text="Jorge Isidro Blanco Martínez | A01745907@tec.mx"
                 android:textColor="#FFFFFF"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -157,9 +157,9 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="monospace"
-                android:text="Parrish Gutiérrez Arrieta A01751584"
+                android:text="Parrish Gutiérrez Arrieta | A01751584@tec.mx"
                 android:textColor="#FFFFFF"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
         </LinearLayout>

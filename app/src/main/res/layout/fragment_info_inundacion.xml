@@ -50,10 +50,10 @@
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/gradient_list_5"
         android:layout_marginStart="32dp"
         android:layout_marginTop="130dp"
         android:layout_marginEnd="32dp"
+        android:background="@drawable/gradient_list_5"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -180,6 +180,19 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="413dp"
+        android:layout_height="548dp"
+        android:layout_marginTop="140dp"
+        android:layout_weight="1"
+        android:alpha="0.7"
+        android:src="@drawable/lineas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
